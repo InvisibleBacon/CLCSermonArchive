@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <script src="json2.js"></script>
+  
+  <script type="text/javascript">
+//  	$(document).ready(function() {
+//  		$(".accordion.inner").accordion();
+//  		$(".accordion").accordion();
+//  	});
+
+  	$(function() {
+  		var array = [];
+  		$(".accordion li").each(function(i, item) {
+  			var text = $(item).text().trim();
+  			var title = text.substring(1, text.indexOf("\"", 1));
+  			text = text.substring(text.indexOf("[", title.length));
+  			var dateParts = text.substring(1, text.indexOf("]", 1)).split("-");
+  			var year = dateParts[2] = new Number(dateParts[2]) + 2000;
+  			var date = dateParts.join("/");
+
+  			text = text.substring(text.indexOf("("));
+  			var scripture = text.substring(1, text.lastIndexOf(")")).replace(/ - /g, "; ");
+  			var mp3 = $(item).find("a:contains('Mp3')").attr("href");
+  			var videos = $(item).find("a:not(:contains('Mp3'))").map(function() { return $(this).attr("href") }).get();
+
+  			//console.log(videos);
+  			array.push([year.toString(), date, title, scripture, mp3, videos, ""]);
+  		});
+
+  		window.final = (array);
+
+  		console.log(JSON.stringify(final, 0, "\t"));
+  	});
+  </script>
+    
+<title>Sermon MP3 Archive</title>
+</head>
+<body style="font-size:12px;">
+  
+<div class="accordion">
+	<h3><a href="#">2012</a></h3>
+	<div>
+		<div class="accordion inner">
+			<h3><a href="#">January</a></h3>
+			<div>
+				<ul>
+					<li>"Don't Drop The Ball" [1-01-12] (Philippians 3:12) <a href="mp3s/2012/[01-01-12] Don't Drop The Ball (Philippians 3 12).mp3"> Mp3</a> | <a href="https://vimeo.com/35266494"> Video 1</a> | <a href="https://vimeo.com/35267898"> Video 2</a></li>
+                    
+                    <li>"Catching Your Breath" [1-08-12] (Matthew 6:25) <a href="mp3s/2012/[01-08-12] Catching Your Breath (Matthew 6 25).mp3">Mp3</a> | <a href="https://vimeo.com/36020969"> Video</a></li>
+                    
+                    <li>"Consider This" [1-15-12] (Mark 5:21) <a href="mp3s/2012/[01-15-12] Consider This (Mark 5 21).mp3">Mp3</a> | <a href="https://vimeo.com/35636528"> Video 1</a> | <a href="https://vimeo.com/35638232"> Video 2</a></li>
+                    
+                    <li>"How To Get A Life" [1-22-12] (John 10:10) <a href="mp3s/2012/[01-22-12] How To Get A Life (John 10 10).mp3">Mp3</a> | <a href="https://vimeo.com/36021888"> Video 1 </a> | <a href="https://vimeo.com/36432630">  Video 2</a></li>
+                    <li>"Fabric &amp; Flesh" [1-29-12] (Luke 5:36) <a href="mp3s/2012/[01-29-12] Fabric & Flesh (Luke 5 36).mp3">Mp3</a> | <a href="https://vimeo.com/36434704"> Video 1</a> | <a href="https://vimeo.com/36836070"> Video 2</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">February</a></h3>
+			<div>
+				<ul>
+					<li>"To Have &amp; To Hold" [2-05-12] (Luke 5:36) <a href="mp3s/2012/[02-05-12] To Have & To Hold (Luke 5 36).mp3"> Mp3</a> | <a href="https://vimeo.com/36840990"> Video 1</a> | <a href="https://vimeo.com/37245219"> Video 2</a></li>
+                    
+					<li>"Facedown &amp; Man Up" [2-12-12] (John 18:1) <a href="mp3s/2012/[02-12-12] Facedown and Man Up (John 18 1).mp3"> Mp3</a> | <a href="https://vimeo.com/37247258"> Video 1</a> | <a href="https://vimeo.com/37666862"> Video 2</a></li>
+                    
+					<li>"How Did It Come To This?" [2-19-12] (John 18:1) <a href="mp3s/2012/[02-19-12] How Did It Come To This (John 18 1).mp3"> Mp3</a> | <a href="https://vimeo.com/37670906"> Video 1</a> | <a href="https://vimeo.com/38097530"> Video 2</a></li>
+                    <li>"Dropped" [2-26-12] (2 Samuel 9:1) <a href="mp3s/2012/[02-26-12] Dropped (2 Samuel 9 1).mp3"> Mp3</a> | <a href="https://vimeo.com/38100427"> Video 1</a> | <a href="https://vimeo.com/38518894"> Video 2</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">March</a></h3>
+			<div>
+				<ul>
+					<li>"Crossed Out, Crossed In" [3-04-12] (1 Samuel 16:1) <a href="mp3s/2012/[03-04-12] Crossed Out, Crossed In (1 Samuel 16 1).mp3"> Mp3</a> | <a href="https://vimeo.com/38523677"> Video 1</a> | <a href="https://vimeo.com/38915893"> Video 2</a></li>
+                    
+					<li>"Put Your Bucket Away" [3-11-12] (Mark 4:35) <a href="mp3s/2012/[03-11-12] Put Your Bucket Away (Mark 4 35).mp3"> Mp3</a> | <a href="https://vimeo.com/38921850"> Video 1</a> | <a href="https://vimeo.com/39418212"> Video 2</a></li>
+                    
+					<li>"Leave It Here" [3-18-12] (John 4:1) <a href="mp3s/2012/[03-18-12] Leave It Here (John 4 1).mp3"> Mp3</a> | <a href="https://vimeo.com/39434351"> Video 1</a> | <a href="https://vimeo.com/39771508"> Video 2</a> | <a href="https://vimeo.com/39775282"> Video 3</a></li>
+                    
+                    <li>"Brokeness" [3-25-12] (1 Timothy 4:1 - Mark 6:39) <a href="mp3s/2012/[03-25-12] Brokenness (1 Timothy 4 1 - Mark 6 39).mp3"> Mp3</a> | <a href="https://vimeo.com/40156948"> Video 1</a> | <a href="https://vimeo.com/40159568"> Video 2</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">April</a></h3>
+			<div>
+				<ul>
+					<li>"I Got The Dirt" [4-01-12] (John 12:12 - Matthew 26:37 - John 20:14) <a href="mp3s/2012/[04-01-12] I Got The Dirt (John 12 12 - Matthew 26 37 - John 20 14).mp3"> Mp3</a> | <a href="https://vimeo.com/40604247"> Video 1</a> | <a href="https://vimeo.com/40590073"> Video 2</a></li>
+                    
+					<li>"After This..." [4-08-12] (Hebrews 12:1 - Mark 16:1 - Matthew 26:57) <a href="mp3s/2012/[04-08-12] After This... (Hebrews 12 1 - Mark 16 1 - Matthew 26 57).mp3"> Mp3</a> | Video</li>
+                    
+					<li>"The Mercy To Throw It Off" [4-15-12] (Hebrews 12:1 - Hebrews 4:15 - Matthew 5:7 - Mark 10:46) <a href="mp3s/2012/[04-15-12] The Mercy To Throw It Off (Hebrews 12 1 - Hebrews 4 15 - Matthew 5 7 - Mark 10 46).mp3"> Mp3</a> | Video</li>
+                    
+                    <li>"Just Hold On" [4-22-12] (Mark 5:24 - Isaiah 42:3 - Ruth 1:14) <a href="mp3s/2012/[04-22-12] Just Hold On (Mark 5 24 - Isaiah 42 3 - Ruth 1 14).mp3"> Mp3</a> | <a href="https://vimeo.com/41163170"> Video</a></li>
+                    
+					<li>"A Tale Of Two Seeds" [4-29-12] (Matthew 13:24) <a href="mp3s/2012/[04-29-12] A Tale of Two Seeds (Matthew 13 24).mp3"> Mp3</a> | <a href="https://vimeo.com/41584274"> Video 1</a> | <a href="https://vimeo.com/41599571"> Video 2</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">May</a></h3>
+			<div>
+				<ul>
+					<li>"Pretenders" [5-20-12] (Acts 27:19) <a href="mp3s/2012/[05-20-12] Pretenders (Acts 27 19).mp3"> Mp3</a> | <a href="https://vimeo.com/42660392"> Video 1</a> | <a href="https://vimeo.com/42696964"> Video 2</a></li>
+                    
+					<li>"What God Forms, He Fills" [5-27-12] (Genesis 1:1) <a href="mp3s/2012/[05-27-12] What God Forms He Fills (Genesis 1 1).mp3"> Mp3</a> | <a href="https://vimeo.com/43483828"> Video 1</a> | <a href="https://vimeo.com/43499135"> VIdeo 2</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">June</a></h3>
+			<div>
+				<ul>
+					<li>"Why I Got To Do This" [6-03-12] (Exodus 13:17 - Exodus 14:5 - Numbers 11:4 - Matthew 3:13) <a href="mp3s/2012/[06-03-12] Why I Got To Do This (Exodus 13 17 - Exodus 14 5 - Numbers 11 4 - Matthew 3 13).mp3"> Mp3</a> | <a href="https://vimeo.com/43874146"> Video 1</a> | <a href="https://vimeo.com/43874145"> Video 2</a></li>
+                    
+					<li>"The One Thing My Daddy Taught Me" [6-10-12] (Luke 4:14) <a href="mp3s/2012/[06-10-12] The One Thing My Daddy Taught Me (Luke 4 14).mp3"> Mp3</a> | <a href="https://vimeo.com/44356914"> Video 1</a> | <a href="https://vimeo.com/44356913"> Video 2</a></li>
+                    
+					<li>"Confidently Waiting" [6-24-12] (Psalm 27:13) <a href="mp3s/2012/[06-24-12] Confidently Waiting (Psalm 27 13).mp3"> Mp3</a> | <a href="https://vimeo.com/45103135"> Video</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">July</a></h3>
+			<div>
+				<ul>
+					<li>"Watch The Lamb" [7-01-12] (Hebrews 12:1 - John 1:29 - Exodus 12:5) <a href="mp3s/2012/[07-01-12] Watch The Lamb (Hebrews 12 1 - John 1 29 - Exodus 12 5).mp3"> Mp3</a> | <a href="https://vimeo.com/45284817"> Video 1</a> | <a href="https://vimeo.com/45284816"> Video 2</a></li>
+                    
+                    <li>"Watch The Lamb Part 2" [7-08-12] (John 9:1) <a href="mp3s/2012/[07-08-12] Watch The Lamb 2 (John 9 1).mp3"> Mp3</a> | <a href="https://vimeo.com/45701088"> Video 1</a> | <a href="https://vimeo.com/45701087"> Video 2</a></li>
+                    
+                    <li>"Rooted In Right Thinking" [7-15-12] (Colossians 2:6) <a href="mp3s/2012/[07-15-12] Rooted In Right Thinking (Colossians 2 6).mp3"> Mp3</a> | <a href="https://vimeo.com/45970783"> Video 1</a> | <a href="ttps://vimeo.com/45972962"> Video 2</a></li>
+                    <li>"Wait To Worry" [7-22-12] (Matthew 6:25) <a href="mp3s/2012/[07-22-12] Wait To Worry (Matthew 6 25).mp3"> Mp3</a> | <a href="https://vimeo.com/46356872"> Video</a></li>
+                    
+                    <li>"This Is Your Brain" [7-29-12] (Romans 12:1) <a href="mp3s/2012/[07-29-12] This Is Your Brain (Romans 12 1).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">August</a></h3>
+			<div>
+				<ul>
+					<li>"Think Different" [8-05-12] (Romans 12:2) <a href="mp3s/2012/[08-05-12] Think Different (Romans 12 2).mp3"> Mp3</a></li>
+                    <li>"Change Your Filter" [8-12-12] (Romans 12:2) <a href="mp3s/2012/[08-12-12] Change Your Filter (Romans 12 2).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            
+
+        
+        </div>
+	</div>
+
+	<!--end of 2012 -->
+    
+    <h3><a href="#">2011</a></h3>
+	<div>
+		<div class="accordion inner">
+			<h3><a href="#">January</a></h3>
+			<div>
+				<ul>
+					<li>"Pulling A Permit" [1-02-11] (Matthew 7:24) <a href="mp3s/2011/[01-02-11] Pulling A Permit (Matthew 7 24).mp3"> Mp3</a> | <a href="https://vimeo.com/18983105"> Video</a></li>
+					<li>"Is There Not A Cause?" [1-09-11] (1 Samuel 17:25) <a href="mp3s/2011/[01-09-11] Is There Not A Cause (1 Samuel 17 25).mp3"> Mp3</a> | <a href="https://vimeo.com/18994187"> Video</a></li>
+					<li>"If I Could Walk On Water" [1-16-11] (Matthew 14:22) <a href="mp3s/2011/[01-16-11] If I Could Walk On Water (Matthew 14 22).mp3"> Mp3</a> | <a href="https://vimeo.com/19284571"> Video 1</a> | <a href="https://vimeo.com/19295787"> Video 2</a></li>
+                    <li>"A Chance, A Choice, A Voice" [1-23-11] (Acts 16:16) <a href="mp3s/2011/[01-23-11] A Chance, A Choice, and A Voice (Acts 16 16).mp3"> Mp3</a> | <a href="https://vimeo.com/19482398"> Video 1</a> | <a href="https://vimeo.com/19483919"> Video 2</a></li>
+					<li>"A Christmas Tree Farm" [1-30-11] (Matthew 13:31) <a href="mp3s/2011/[01-30-11] A Christmas Tree Farm (Matthew 13 31).mp3"> Mp3</a> | <a href="https://vimeo.com/19777412"> Video</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">February</a></h3>
+			<div>
+				<ul>
+					<li>"Four For Four" [2-06-11] (Romans 8:28) <a href=			 "mp3s/2011/[02-06-11] Four For For (Romans 8 28).mp3"> Mp3</a> | <a href="https://vimeo.com/20021192"> Video 1</a> | <a href="https://vimeo.com/20023688"> Video 2</a></li>
+					<li>"Objects In The Rearview Mirror..." [2-13-11] (Philippians                    3:1) <a href="mp3s/2011/[02-13-11] Objects In The Rear View Mirror... (Philippians 3 1).mp3"> Mp3</a> | <a href="https://vimeo.com/20288721"> Video 1</a> | <a href="https://vimeo.com/20291580"> Video 2</a></li>
+					<li>"The Master Stain Remover" [2-20-11] (Luke 5:5 - Matthew 11:29 - Mark 11:24) <a href="mp3s/2011/[02-20-11] The Master Stain Remover (Luke 5-5 - Matthew 11-29 - Mark 11-24).mp3"> Mp3</a> | <a href="https://vimeo.com/20602876"> Video 1</a> | <a href="https://vimeo.com/20627729"> Video 2</a></li>
+                    <li>"Letter Of Approval" [2-27-11] (Mark 5:21 - Luke 8:40) <a href="mp3s/2011/[02-27-11] Letter Of Approval (Mark 5-21 - Luke 8-40).mp3"> Mp3</a> | <a href="https://vimeo.com/20882739"> Video 1</a> | <a href="https://vimeo.com/20904632"> Video 2</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">March</a></h3>
+			<div>
+				<ul>
+					<li>"The Oscar Goes To..." [3-06-11] (Genesis 25:26 - Genesis 27:11) <a href="mp3s/2011/[03-06-11] And The Oscar Goes To... (Genesis 25-26 - Genesis 27-11).mp3"> Mp3</a> | <a href="https://vimeo.com/21153542"> Video 1</a> | <a href="https://vimeo.com/21296329"> Video 2</a></li>
+					<li>"The Annointing Of Sacrifice" [3-10-11] (John 12:1) <a href="mp3s/2011/[03-10-11] The Annointing Of Sacrifice (Jon 12 1).mp3"> Mp3</a></li>
+					<li>"The Life Sentance" [3-20-11] (Matthew 19:16) <a href="mp3s/2011/[03-20-11] The Life Sentance (Matthew 19 16).mp3"> Mp3</a> | <a href="https://vimeo.com/21426960"> Video 1</a> | <a href="https://vimeo.com/21700752"> Video 2</a></li>
+                    <li>"A Liquid Diet" [3-27-11] (John 4:13) <a href="mp3s/2011/[03-27-11] A Liquid Diet (John 4 13).mp3"> Mp3</a> | <a href="https://vimeo.com/22080845"> Video 1</a> | <a href="https://vimeo.com/22083562"> Video 2</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">April</a></h3>
+			<div>
+				<ul>
+					<li>"Lead On Lord" [4-03-11] (Psalm 23:1) <a href="mp3s/2011/[04-03-11] Lead On Lord (Psalm 23 1).mp3"> Mp3</a> | <a href="https://vimeo.com/22392917"> Video 1</a> | <a href="https://vimeo.com/22655598">Video 2</a></li>
+					<li>"Behind The Cross" [4-24-11] (Hebrews 9:13 - Matthew 27:32) <a href="mp3s/2011/[04-24-11] Behind The Cross (Hebrews 9-13 - Matthew 27-32).mp3"> Mp3</a> | <a href="https://vimeo.com/23265070"> Video 1</a> | <a href="https://vimeo.com/23269892"> Video 2</a></li>
+					
+				</ul>
+			</div>
+            <h3><a href="#">May</a></h3>
+			<div>
+				<ul>
+					<li>"Fireproof" [5-01-11] (Psalm 1:1) <a href="mp3s/2011/[05-01-11] Fireproof (Psalm 1 1).mp3"> Mp3 </a> | <a href="https://vimeo.com/23602749"> Video 1</a> | <a href="https://vimeo.com/23605299"> Video 2</a></li>
+					<li>"Power, Change, Time, &amp; The Cross" [5-15-11] (Rom. 1:16 - Acts 1:8 - 2 Tim 1:7 - 2 Cor. 10:4) <a href="mp3s/2011/[05-15-11] Power, Change, Time, and The Cross (Rom. 1-16 - Acts 1-8 - 2 Tim. 1-7 - 2 Cor. 10-4).mp3"> Mp3 </a> | <a href="https://vimeo.com/24219097"> Video 1</a> | <a href="https://vimeo.com/24220855"> Video 2</a></li>
+					<li>"Get Over It" [5-22-11] (Matthew 16:13) <a href="mp3s/2011/[05-22-11] Get Over It (Matthew 16 13).mp3"> Mp3 </a> | <a href="https://vimeo.com/24549609"> Video 1</a> | <a href="https://vimeo.com/24564245"> Video 2</a></li>
+                    <li>"Get Up" [5-29-11] (Proverbs) <a href="mp3s/2011/[05-29-11] Get Up (Proverbs 24 16).mp3"> Mp3 </a> | <a href="https://vimeo.com/24827063"> Video 1</a> | <a href="https://vimeo.com/26041623"> Video 2</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">June</a></h3>
+			<div>
+				<ul>
+					<li>"Blood Work" [6-05-11] (Ephesians 1:7) <a href="mp3s/2011/[06-05-11] Blood Work (Ephesians 1 7).mp3"> Mp3</a> | <a href="https://vimeo.com/25219905"> Video 1</a> | <a href="https://vimeo.com/25235699"> Video 2</a></li>
+					<li>"Rope Holders &amp; Basket Cases" [6-12-11] (Acts 9:15) <a href="mp3s/2011/[06-12-11] Rope Holders, and Basket Cases (Acts 9 15).mp3"> Mp3</a> | <a href="https://vimeo.com/25437974"> Video 1</a> | <a href="https://vimeo.com/25441577"> Video 2</a></li>
+					<li>"Service Men" [6-12-11] (Matthew 19:5) <a href="mp3s/2011/[06-12-11] Service Men (Matthew 19-5).mp3"> Mp3</a> | <a href="https://vimeo.com/26166240"> Video</a></li>
+                    <li>"Learning To Learn" [6-26-11] (Proverbs 3:5) <a href="mp3s/2011/[06-26-11] Learning To Lean (Proverbs 3 5).mp3"> Mp3</a> | <a href="https://vimeo.com/26498487"> Video 1</a> | <a href="https://vimeo.com/26499475"> Video 2</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">July</a></h3>
+			<div>
+				<ul>
+					<li>"Wake Up" [7-03-11] (Isaiah 60:1) <a href="mp3s/2011/[07-03-11] Wake up (Isaiah 60 1).mp3"> Mp3 </a> | <a href="https://vimeo.com/26672483"> Video 1</a> | <a href="https://vimeo.com/26674987"> Video 2</a></li>
+					<li>"Contents Under Pressure" [7-10-11] (Luke 4:14) <a href="mp3s/2011/[07-10-11] Contents Under Pressure (Luke 4 14).mp3"> Mp3 </a> | <a href="https://vimeo.com/27552063"> Video 1</a> | <a href="https://vimeo.com/27565840"> Video 2</a></li>
+					<li>"Straighten Me Out" [7-17-11] (Luke 3:4 - John 14:1-6) <a href="mp3s/2011/[07-17-11] Straighten Me Out (Luke 3 4 - John 14 1-6).mp3"> Mp3 </a> | <a href="https://vimeo.com/27487034"> Video 1</a> | <a href="https://vimeo.com/27487994"> Video 2</a></li>
+                    <li>"No More Ordinary" [7-24-11] (John 2:1) <a href="mp3s/2011/[07-24-11] No More Ordinary (John 2 1).mp3"> Mp3 </a> | <a href="https://vimeo.com/27815320"> Video 1</a> | <a href="https://vimeo.com/27816982"> Video 2</a></li>
+					<li>"The Final Word" [7-31-11] (John 2:1) <a href="mp3s/2011/[07-03-11] Wake up (Isaiah 60 1).mp3"> Mp3 </a> | <a href="https://vimeo.com/28108809"> Video 1</a> | <a href="https://vimeo.com/28109892"> Video 2</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">August</a></h3>
+			<div>
+				<ul>
+					<li>"The Only Thing That Matters" [8-07-11] (Galatians 5:6 - John 21:1) <a href="mp3s/2011/[08-07-11] The Only Thing That Matters (Galatians 5 6 - John 21 1).mp3"> Mp3</a> | <a href="https://vimeo.com/28715959"> Video 1</a> | <a href="https://vimeo.com/28718339"> Video 2</a></li>
+					<li>"The Only Thing That Matters Part 2" [8-14-11] (1 Corinthians 13:1) <a href="mp3s/2011/[08-14-11] The Only Thing That Matters 2 (1 Corinthians 13 1).mp3"> Mp3</a></li>
+					<li>"The Cross Took The Hit" [8-21-11] (Isaiah 53) <a href="mp3s/2011/[08-21-11] The Cross Took The Hit (Isaiah 53).mp3"> Mp3</a> | <a href="https://vimeo.com/28409740"> Video</a></li>
+                    <li>"Pressed On - Press In!" [8-28-11] (Matthew 26:36) <a href="mp3s/2011/[08-28-11] Pressed On- Press In! (Matthew 26 36).mp3"> Mp3</a> | <a href="https://vimeo.com/29047520"> Video 1</a> | <a href="https://vimeo.com/29048719"> Video 2</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">September</a></h3>
+			<div>
+				<ul>
+					<li>"Positions &amp; Postures" [9-04-11] (Matthew 26:26) <a href="mp3s/2011/[09-04-11] Positions and Postures (Matthew 26 36).mp3"> Mp3</a> | <a href="https://vimeo.com/29439700"> Video</a></li>
+					<li>"The Only Strong Tower" [9-11-11] (Pro. 18:10, Rom. 10:13, Phil. 2:9, Mat. 1:20 ) <a href="mp3s/2011/[09-11-11] The Only Strong Tower (Pro 18 10 - Rom 10 13 - phil 2 9 - Mat 1 20).mp3"> Mp3</a> | <a href="https://vimeo.com/29728416"> Video</a></li>
+					<li>"The Goal" [9-18-11] (Philippians 3:10) <a href="mp3s/2011/[09-18-11] The Goal (Philippians 3 10).mp3"> Mp3</a> | <a href="https://vimeo.com/30077019"> Video 1</a> | <a href="https://vimeo.com/30079533"> Video 2</a></li>
+                    <li>"Step One" [9-25-11] (Matthew 22:34) <a href="mp3s/2011/[09-25-11] Step One (Matthew 22 34).mp3"> Mp3</a> | <a href="https://vimeo.com/30435688"> Video 1 </a> | <a href="https://vimeo.com/30436798"> Video 2</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">October</a></h3>
+			<div>
+				<ul>
+					<li>"Step Two The List" [10-02-11] (Matthew 22:34) <a href="mp3s/2011/[10-02-11] Step Two The List (Matthew 22 34).mp3"> Mp3</a> | <a href="https://vimeo.com/30805744"> Video 1</a> | <a href="https://vimeo.com/46356871"> Video 2</a></li>
+					<li>"Turn Your Heart" [10-09-11] (Matthew 22:34) <a href="mp3s/2011/[10-09-11] Turn Your Heart (Matthew 22 34).mp3"> Mp3</a> | <a href="https://vimeo.com/31147870"> Video 1</a> | <a href="https://vimeo.com/31147870"> Video 2</a></li>
+					<li>"Empty" [10-23-11] (Matthew 25:1) <a href="mp3s/2011/[10-23-11] Empty (Matthew 25 1).mp3"> Mp3</a> | <a href="https://vimeo.com/31887129"> Video 1</a> | <a href="https://vimeo.com/31901492"> Video 2</a></li>
+                    <li>"It Won't Work" [10-30-11] (Isaiah 54:17 - Jeremiah 29:11) <a href="mp3s/2011/[10-30-11] It Won't Work (Isaiah 54 17 - Jeremiah 29 11).mp3"> Mp3</a> | <a href="https://vimeo.com/32206615"> Video 1</a> | <a href="https://vimeo.com/32207548"> Video 2</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">November</a></h3>
+			<div>
+				<ul>
+					<li>"Coming Up Short - Try A Tree" [11-06-11] (Luke 19:1) <a href="mp3s/2011/[11-06-11] Coming Up Short- Try A Tree (Luke 19 1).mp3"> Mp3 </a> | <a href="https://vimeo.com/32576778"> Video 1</a> | <a href="https://vimeo.com/32578543"> Video 2</a></li>
+					<li>"Supernatural Sweetener" [11-13-11] (Galatians 2:20) <a href="mp3s/2011/[11-13-11] Supernatural Sweetener (Galatians 2 20).mp3"> Mp3 </a> | <a href="https://vimeo.com/32923676"> Video 1</a> | <a href="https://vimeo.com/32925238"> Video 2</a></li>
+					<li>"The First Thanksgiving" [11-20-11] (Matthew 14:13) <a href="mp3s/2011/[11-20-11] The First Thanksgiving (Matthew 14 13).mp3"> Mp3 </a> | <a href="https://vimeo.com/33286365"> Video 1</a> | <a href="https://vimeo.com/33289161"> Video 2</a></li>
+                    <li>"Born This Way" [11-27-11] (John 3:1) <a href="mp3s/2011/[11-27-11] Born This Way (John 3 1).mp3"> Mp3 </a> | <a href="https://vimeo.com/33665413"> Video 1</a> | <a href="https://vimeo.com/33666908"> Video 2</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">December</a></h3>
+			<div>
+				<ul>
+					<li>"A Divine Visitation" [12-11-11] (Luke 2:1) <a href="mp3s/2011/[12-11-11] A Divine Visitation (Luke 2 1).mp3"> Mp3 </a> | <a href="https://vimeo.com/34676733"> Video 1</a> | <a href="https://vimeo.com/34686619"> Video 2</a></li>
+					<li>"He Still Seeks Wise Men" [12-18-11] (Luke 2:1) <a href="mp3s/2011/[12-18-11] He Still Seeks Wise Men (Luke 2 1).mp3"> Mp3 </a> | <a href="https://vimeo.com/34902447"> Video 1</a> | <a href="https://vimeo.com/34903643"> Video 2</a></li>
+				</ul>
+			</div>
+		
+        
+        
+        
+        </div>
+	</div>
+	
+    <!--end of 2011 -->
+    
+    <h3><a href="#">2010</a></h3>
+	<div>
+		<div class="accordion inner">
+			<h3><a href="#">January</a></h3>
+			<div>
+				<ul>
+					<li>"From Walking To Working" [3-03-10] (Genesis 6:9) <a href="mp3s/2010/[01-03-10] From Walking To Working (Genesis 6 9).mp3"> Mp3</a> | Video</li>
+					<li>"The Dirty Work - From Walking To Working Part 2" [3-10-10] (Genesis 6:9) <a href="mp3s/2010/[01-10-10] The Dirty Work - From Walking To Working 2 (Genesis 6 9).mp3"> Mp3</a> | <a href="https://vimeo.com/9761136"> Video</a></li>
+					<li>"Work Related Injury - From Walking To Working" [3-17-10] (Genesis 6:9 - Proverbs 3:5) <a href="mp3s/2010/[01-17-10] Work Related Injury - From Walking To Working 3 (Genesis 6 9 - Proverbs 3 5).mp3"> Mp3</a> | <a href="https://vimeo.com/9560076"> Video</a></li>
+                    <li>"Standing Room Only" [3-24-10] (Daniel 3:1) <a href="mp3s/2010/[01-24-10] Standing Room Only (Daniel 3 1).mp3"> Mp3</a> | <a href="https://vimeo.com/9903811"> Video</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">February</a></h3>
+			<div>
+				<ul>
+					<li>"Secret Society" [2-14-10] (Psalm 91:1 - Matthew 6:1) <a href="mp3s/2010/[02-14-10] Secret Society (Psalm 91 1 - Matthew 6 1).mp3"> Mp3</a> | <a href="https://vimeo.com/9904304"> Video 1</a> | <a href="https://vimeo.com/10066949"> Video 2</a></li>
+					<li>"Messing Up Plans" [2-21-10] (Matthew 6:2) <a href="mp3s/2010/[02-21-10] Messing Up Plans (Matthew 6 2).mp3"> Mp3</a> | <a href="https://vimeo.com/10068326"> Video</a></li>
+					<li>"The Runners World" [2-28-10] (Matthew 6:22) <a href="mp3s/2010/[02-28-10] The Runners World (Matthew 6 22).mp3"> Mp3</a> | <a href="https://vimeo.com/10225082"> Video</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">March</a></h3>
+			<div>
+				<ul>
+					<li>"The Power &amp; Secret Of Contentment" [3-07-10] (Matthew 6:19) <a href="mp3s/2010/[03-07-10] The Power And Secret of Contentment (Matthew 6 19).mp3"> Mp3</a> | <a href="https://vimeo.com/10225599"> Video 1</a> | <a href="https://vimeo.com/10405780"> Video 2</a></li>
+					<li>"A Setup For A Saviour" [3-28-10] (Matthew 21:1 - Luke 22:7) <a href="mp3s/2010/[03-28-10] A Setup For A Savior (Matthew 21 1 - Luke 22 7).mp3"> Mp3</a> | <a href="https://vimeo.com/11296214"> Video</a></li>
+									</ul>
+			</div>
+			<h3><a href="#">April</a></h3>
+			<div>
+				<ul>
+					<li>"Living On The Right Side Of The Cross" [4-04-10] (Luke 23:26) <a href="mp3s/2010/[04-04-10] Living On The Right Side Of The Cross (Luke 23 26).mp3"> Mp3</a> | <a href="https://vimeo.com/11598920"> Video</a></li>
+					<li>"The Rolling Stones" [4-11-10] (Matthew 27:57) <a href="mp3s/2010/[04-11-10] The Rolling Stones (Matthew 27 57).mp3"> Mp3</a> | <a href="https://vimeo.com/11328018"> Video</a></li>
+					<li>"Don't Put God In A Box - Recognizing The Redeemer" [4-18-10] (Matthew 14:22 - 1 Samuel 3:27) <a href="mp3s/2010/[04-18-10] Don't Put God In A Box [Recognizing The Redeemer] (Matthew 14 22 - 1 Samuel 3 27).mp3"> Mp3</a> | <a href="https://vimeo.com/11596661"> Video</a></li>
+                    <li>"Triumph Over Torment" [4-25-10] (Mark 5:1) <a href="mp3s/2010/[04-25-10] Triumpth Over Torment (Mark 5 1).mp3"> Mp3</a> | <a href="https://vimeo.com/12447455">Video 1</a> | <a href="https://vimeo.com/12455904">Video 2</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">May</a></h3>
+			<div>
+				<ul>
+					<li>"Victory Of The Redeemed" [5-02-10] (Romans 12:1) <a href="mp3s/2010/[05-02-10] Victory Of The Redeemed (Romans 12 1).mp3"> Mp3</a> | Video</li>
+					<li>"Do You See The Lord?" [5-09-10] (Isaiah 6:1) <a href="mp3s/2010/[05-09-10] Do You See The Lord (Isaiah 6 1).mp3"> Mp3</a> | <a href="https://vimeo.com/12624067"> Video</a></li>
+					<li>"Function VS Fashion" [5-16-10] (1 Corinthians 13:12) <a href="mp3s/2010/[05-16-10] Function Vs Fashion (1 Corinthians 13 12).mp3"> Mp3</a> | <a href="https://vimeo.com/13183001"> Video</a></li>
+                    <li>"There Is Power In The Blood" [5-23-10] (Hebrews 13:20 - Leviticus 14:1) <a href="mp3s/2010/[05-23-10] There Is Power In The Blood (Hebrews 13 20 - Leviticus 14 1).mp3"> Mp3</a> | <a href="https://vimeo.com/13184407"> Video</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">June</a></h3>
+			<div>
+				<ul>
+					<li>"Having Faith" [6-13-10] (Mark 11:20) <a href="mp3s/2010/[06-13-10] Having Faith (Mark 11 20).mp3"> Mp3</a> | <a href="https://vimeo.com/12923792"> Video 1</a> | <a href="https://vimeo.com/12921898">Video 2</a></li>
+					<li>"Fishing For Fathers - Faithfulness" [6-20-10] (Jonah 1:1 - 2 Kings 14:23) <a href="mp3s/2010/[06-20-10] Fishing For Fathers[Faithfulness] (Jonah 1 1 - 2 Kings 14 23).mp3"> Mp3</a> | <a href="https://vimeo.com/13625326"> Video 1</a> | <a href="https://vimeo.com/13619606"> Video 2</a></li>
+					<li>"The Mercy Of The Storm" [6-27-10] (Jonah 1:1) <a href="mp3s/2010/[06-27-10] The Mercy Of The Storm (Jonah 1 1).mp3"> Mp3</a> | <a href="https://vimeo.com/13759154"> Video 1</a> | <a href="https://vimeo.com/13761652"> Video 2</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">July</a></h3>
+			<div>
+				<ul>
+					<li>"What's Missing - The One That Didn't Get Away" [7-04-10] (Jonah 1:17) <a href="mp3s/2010/[07-04-10] Whats Missing [The One That Didn't Get Away] (Jonah 1 17).mp3"> Mp3</a> | <a href="https://vimeo.com/13429253"> Video</a></li>
+					<li>"Who Has Your Heart?" [7-11-10] (Jonah 3:1) <a href="mp3s/2010/[07-11-10] Who Has Your Heart (Jonah 3 1).mp3"> Mp3</a> | <a href="https://vimeo.com/13357139"> Video</a></li>
+					<li>"Are You A Looser?" [7-25-10] (Jonah 4:1) <a href="mp3s/2010/[07-25-10] Are You A Loser (Jonah 4 1).mp3"> Mp3</a> | <a href="https://vimeo.com/14375122"> Video</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">August</a></h3>
+			<div>
+				<ul>
+					<li>"His Will Or His Worm?" [8-01-10] (Jonah 4:1) <a href="mp3s/2010/[08-01-10] His Will or His Worm (Jonah 4 1).mp3"> Mp3</a> | <a href="https://vimeo.com/14382194"> Video 1</a> | <a href="https://vimeo.com/14488888">Video 2</a></li>
+					<li>"Which Way Will You Go?" [8-22-10] (Genesis 4:1) <a href="mp3s/2010/[08-22-10] Which Way Will You Go (Genesis 4 1).mp3"> Mp3</a> | <a href="https://vimeo.com/14536887"> Video</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">September</a></h3>
+			<div>
+				<ul>
+					<li>"Drop It Like It's Hot" [9-05-10] (Matthew 17:24) <a href="mp3s/2010/[09-05-10] Drop It Like It's Hot (Matthew 17 24).mp3"> Mp3</a> | <a href="https://vimeo.com/15115033"> Video</a></li>
+					<li>"How We Treat Each Other" [9-12-10] (1 John 4:19) <a href="mp3s/2010/[09-12-10] How We Treat Each Other (1 John 4 19).mp3"> Mp3</a> | <a href="https://vimeo.com/15199661"> Video 1</a> | <a href="https://vimeo.com/15618972"> Video 2</a></li>
+					<li>"Grinding The Axe, Or Burying The Hatchet?" [9-26-10] (Matthew 17:24) <a href="mp3s/2010/[09-26-10] Grinding The Axe, Or Burying The Hatchet (John 13 34).mp3"> Mp3</a> | <a href="https://vimeo.com/15840598"> Video 1</a> | <a href="https://vimeo.com/15974018"> Video 2</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">October</a></h3>
+			<div>
+				<ul>
+					<li>"Walk Like A Christian" [10-03-10] (1 Peter 4:12 - 2 John 1:4) <a href="mp3s/2010/[10-03-10] Walk Like A Christian (1 Peter 4 12 - 2 John 1 4).mp3"> Mp3</a> | <a href="https://vimeo.com/16027362"> Video</a></li>
+					<li>"No Fear Here" [10-10-10] (1 John 4:18 - 2 Timothy 1:7) <a href="mp3s/2010/[10-10-10] No Fear Here (1 John 4 18 - 2 Timothy 1 7).mp3"> Mp3</a> | <a href="https://vimeo.com/16060731"> Video 1</a> | <a href="https://vimeo.com/16245132"> Video 2</a></li>
+					<li>"Our Prodigal God" [10-17-10] (Luke 15:1) <a href="mp3s/2010/[10-17-10] Our Prodigal God (Luke 15 1).mp3"> Mp3</a> | <a href="https://vimeo.com/16246245"> Video 1</a> | <a href="https://vimeo.com/16521285"> Video 2</a></li>
+                    <li>"Older Time Religion" [10-24-10] (Luke 15:1) <a href="mp3s/2010/[10-24-10] Older Time Religion (Luke 15 1).mp3"> Mp3</a> | <a href="https://vimeo.com/16700337"> Video 1</a> | <a href="https://vimeo.com/16702197">Video 2</a></li>
+					<li>"Brother's Keeper" [10-31-10] (Luke 15:1) <a href="mp3s/2010/[10-31-10] Brothers Keeper (Luke 15 1).mp3"> Mp3</a> | <a href="https://vimeo.com/16930325"> Video 1</a> | <a href="https://vimeo.com/46232274"> Video 2</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">November</a></h3>
+			<div>
+				<ul>
+					<li>"No Place Like Home" [11-07-10] (Luke 15:1) <a href="mp3s/2010/[11-07-10] No Place Like Home (Luke 15 11).mp3"> Mp3</a> | <a href="https://vimeo.com/17229588"> Video 1</a> | <a href="https://vimeo.com/17355743"> Video 2</a></li>
+					<li>"Faith That's Through The Roof" [11-14-10] (Mark 2:1 - Luke 5:17) <a href="mp3s/2010/[11-14-10] Faith That's Trough The Roof (Mark 2 1 - Luke 5 17).mp3"> Mp3</a> | <a href="https://vimeo.com/17230080"> Video 1</a> | <a href="https://vimeo.com/17625936"> Video 2</a></li>
+					<li>"Jesus Condemned Condemnation" [11-21-10] (Romans 8:1 - 1 John 8:1) <a href="mp3s/2010/[11-21-10] Jesus Condemned Condemnation (Romans 8 1 - John 8 1).mp3"> Mp3</a> | <a href="https://vimeo.com/17449159"> Video 1</a> | <a href="https://vimeo.com/17627224"> Video 2</a></li>
+                    <li>"From Clean To Well" [11-28-10] (Luke 17:1) <a href="mp3s/2010/[11-28-10] From Clean To Well (Luke 17 1).mp3"> Mp3</a> | <a href="https://vimeo.com/17847401"> Video 1</a> | <a href="https://vimeo.com/17848610"> Video 2</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">December</a></h3>
+			<div>
+				<ul>
+					<li>"Watching &amp; Waiting" [12-05-10] (Luke 1:5) <a href="mp3s/2010/[12-05-10] Watching And Waiting (Luke 1 5).mp3"> Mp3</a> | <a href="https://vimeo.com/18074567"> Video 1</a> | <a href="https://vimeo.com/18086224"> Video 2</a></li>
+					<li>"A Simple Sign" [12-12-10] (Matthew 2:1 - Luke 2:8) <a href="mp3s/2010/[12-12-10] A Simple Sign (Matthew 2 1- Luke 2 8).mp3"> Mp3</a> | <a href="https://vimeo.com/18423883"> Video 1</a> | <a href="https://vimeo.com/18424682"> Video 2</a></li>
+					<li>"The Journey - Don't Stop Believing" [12-19-10] (Luke 2:1) <a href="mp3s/2010/[12-19-10] The Journey - Don't Stop Believing (Luke 2 1).mp3"> Mp3</a> | <a href="https://vimeo.com/18463241"> Video 1</a> | <a href="https://vimeo.com/18464543"> Video 2</a></li>
+                    <li>"Dreams Of My Father" [12-26-10] (Matthew 1:18) <a href="mp3s/2010/[12-26-10] Dreams of My Father (Matthew 1 18).mp3"> Mp3</a> | <a href="https://vimeo.com/46234372"> Video 1</a> | <a href="https://vimeo.com/18714370"> Video 2</a></li>
+				</ul>
+			</div>
+		
+        
+        
+        </div>
+	</div>
+	
+    <!--end of 2010 -->
+    
+    <h3><a href="#">2009</a></h3>
+	<div>
+		<div class="accordion inner">
+			<h3><a href="#">January</a></h3>
+			<div>
+				<ul>
+					<li>"Won't You Be My Neighbor?" [1-04-09] (Luke 10:25) <a href="mp3s/2009/[01-04-09] Won't You Be My Neighbor (Luke 10 25).mp3"> Mp3 </a> | Video</li>
+					<li>"What We Do When Things Are Uncomfortable" [1-11-09] (Genesis 6:1) <a href="mp3s/2009/[01-11-09] What Do We Do When Things Are Uncomfortable (Genessis 6 1).mp3"> Mp3 </a> | Video</li>
+					<li>"On A Wing &amp; A Prayer" [1-25-09] (Isaiah 40:29) <a href="mp3s/2009/[01-25-09] On A Wing And A Prayer (Isaiah 40 29).mp3"> Mp3 </a> | Video</li>
+				</ul>
+			</div>
+			<h3><a href="#">February</a></h3>
+			<div>
+				<ul>
+					<li>"Simple Faith" [2-01-09] (James 2:14) <a href="mp3s/2009/[02-01-09] Simple Faith (James 2 14).mp3"> Mp3</a> | Video</li>
+					<li>"Banking On My Giving" [2-08-09] (Philippians 4:14) <a href="mp3s/2009/[02-08-09] Banking On My Giving (Philippians 4 14).mp3"> Mp3</a> | Video</li>
+					<li>"God's Stimulous Package" [2-15-09] (2 Chronicles 7:13) <a href="mp3s/2009/[02-15-09] God's Stimulous Package (2 Chronicles 7 13).mp3"> Mp3</a> | Video</li>
+                    <li>"Price Check" [2-22-09] (Luke 14:25) <a href="mp3s/2009/[02-22-09] Price Check (Luke 14 25).mp3"> Mp3</a> | Video</li>
+				</ul>
+			</div>
+			<h3><a href="#">March</a></h3>
+			<div>
+				<ul>
+					<li>"Walk This Way" [3-01-09] (1 John 1:1) <a href="mp3s/2009/[03-01-09] Walk This Way (1 John 1 1).mp3"> Mp3</a> | Video</li>
+					<li>"Cast &amp; Release" [3-08-09] (1 Peter 5:6) <a href="mp3s/2009/[03-08-09] Cast and Release (1 Peter 5 6).mp3"> Mp3</a> | Video</li>
+					<li>"A Road Map" [3-15-09] (Matthew 6:25) <a href="mp3s/2009/[03-15-09] A Road Map (Matthew 6 25).mp3"> Mp3</a> | <a href="https://vimeo.com/46689812"> Video</a></li>
+                    <li>"The Binky or The Bible" [3-29-09] (1 Corinthians 13:11) <a href="mp3s/2009/[03-29-09] The Binky or The Bible (1 Corinthians 13 11).mp3"> Mp3</a> | Video</li>
+				</ul>
+			</div>
+			<h3><a href="#">April</a></h3>
+			<div>
+				<ul>
+					<li>"From Waving To Unwavering" [4-05-09] (Mark 11:1) <a href="mp3s/2009/[04-05-09] From Waving To Unwavering (Mark 11 1).mp3"> Mp3 </a> | Video</li>
+					<li>"Trading Post" [4-12-09] (2 Corinthians 5:17) <a href="mp3s/2009/[04-12-09] Trading Post (2 Corinthians 5 17).mp3"> Mp3 </a> | Video</li>
+					<li>"Receiving What You Already Received" [4-26-09] (2 Peter 1:2) <a href="mp3s/2009/[04-26-09] Receiving What You Already Received (2 Peter 1 2).mp3"> Mp3 </a> | Video</li>
+				</ul>
+			</div>
+            <h3><a href="#">May</a></h3>
+			<div>
+				<ul>
+					<li>"What It Means To Be A Partaker" [5-03-09] (2 Peter 1:4) <a href="mp3s/2009/[05-03-09] What It Means To Be A Partaker (2 Peter 1 4).mp3"> Mp3</a> | Video</li>
+					<li>"A Mother's Garden" [5-10-09] (2 Timothy 1:1) <a href="mp3s/2009/[05-10-09] A Mothers Garden (2 Timothy 1 1).mp3"> Mp3</a> | Video</li>
+					<li>"A Lesson From The Garden" [5-17-09] (Romans 8:1) <a href="mp3s/2009/[05-17-09] A Lesson From The Garden (Romans 8 1).mp3"> Mp3</a> | Video</li>
+                    <li>"The War Of The Words" [5-24-09] (John 1:1) <a href="mp3s/2009/[05-24-09] The War of The Words (John 1 1).mp3"> Mp3</a> | Video</li>
+				</ul>
+			</div>
+            <h3><a href="#">June</a></h3>
+			<div>
+				<ul>
+					<li>"Renewing The Service Contract" [6-07-09] (Nehemiah 2:1) <a href="mp3s/2009/[06-07-09] Renewing The Service Contract (Nehemiah 2 1).mp3"> Mp3</a> | <a href="https://vimeo.com/9381221"> Video</a></li>
+					<li>"The Cavalry of Calvary" [6-14-09] (Nehemiah 2:1) <a href="mp3s/2009/[06-14-09] The Cavalry of Calvary (Nehemiah 2 1).mp3"> Mp3</a> | <a href="https://vimeo.com/9393286"> Video</a></li>
+					<li>"Fathers of Faith" [6-21-09] (Nehemiah 2:2 - Hebrews 11:1) <a href="mp3s/2009/[06-21-09] Fathers of Faith (Nehemia 2 2 - Hebrews 11 1).mp3"> Mp3</a> | Video</li>
+				</ul>
+			</div>
+            <h3><a href="#">July</a></h3>
+			<div>
+				<ul>
+					<li>"Declaration of Dependance" [7-05-09] (John 8:34) <a href="mp3s/2009/[07-05-09] Declaration of Dependance (John 8 34).mp3"> Mp3 </a> | Video</li>
+					<li>"What Do You Do In The Face Of Adversity" [7-12-09] (Nehemiah 2:1) <a href="mp3s/2009/[07-12-09] What Do You Do In The Face of Adversity (Nehemiah 2 1).mp3"> Mp3 </a> | <a href="https://vimeo.com/9379388"> Video</a></li>
+					<li>"The Gateway" [7-19-09] (Nehemiah 3:1) <a href="mp3s/2009/[07-19-09] The Gateway (Nehemiah 3 1).mp3"> Mp3 </a> | Video</li>
+                    <li>"The Church Of Jesus Christ" [7-26-09] (Matthew 16:13 - 2 Peter 1:3) <a href="mp3s/2009/[07-26-09] The Church of Jesus Christ (Matthew 16 13 - 2 Peter 1 3).mp3"> Mp3 </a> | Video</li>
+				</ul>
+			</div>
+            <h3><a href="#">August</a></h3>
+			<div>
+				<ul>
+					<li>"Roof It" [8-02-09] (Nehemiah 3:15) <a href="mp3s/2009/[08-02-09] Roof It (Nehemiah 3 15).mp3"> Mp3</a> | Video</li>
+					<li>"Water Gate" [8-09-09] (Nehemiah 3:26) <a href="mp3s/2009/[08-09-09] Water Gate (Nehemiah 3 26).mp3"> Mp3</a> | Video</li>
+					<li>"The Returning Gates" [8-30-09] (Nehemiah 3:28) <a href="mp3s/2009/[08-30-09] The Returning Gates (Nehemiah 3 28).mp3"> Mp3</a> | Video</li>
+				</ul>
+			</div>
+            <h3><a href="#">September</a></h3>
+			<div>
+				<ul>
+					<li>"From Instruction To Construction" [9-06-09] (Nehemiah 4:1) <a href="mp3s/2009/[09-06-09] From Instruction To Construction (Nehemiah 4 1).mp3"> Mp3</a> | Video</li>
+					<li>"Strategic Building" [9-13-09] (Nehemiah 4:7) <a href="mp3s/2009/[09-13-09] Strategic Building (Nehemiah 4 7).mp3"> Mp3</a> | Video</li>
+					<li>"Look, Two Hands" [9-20-09] (Nehemiah 4:14) <a href="mp3s/2009/[09-20-09] Look, Two Hands (Nehemiah 4 14).mp3"> Mp3</a> | Video</li>
+                    <li>"To Know Him Is To Love Him" [9-27-09] (2 Peter 1:1) <a href="mp3s/2009/[09-27-09] To Know Him Is To Love Him (2 Peter 1 1).mp3"> Mp3</a> | Video</li>
+				</ul>
+			</div>
+            <h3><a href="#">October</a></h3>
+			<div>
+				<ul>
+					<li>"What Sound Are You Listening For?" [10-04-09] (Nehemiah 4:18) <a href="mp3s/2009/[10-04-09] What Sound Are You Listening For (Nehemiah 4 18).mp3"> Mp3</a> | Video</li>
+					<li>"Please Show Your ID" [10-11-09] (Romans 8:12) <a href="mp3s/2009/[10-11-09] Please Show Your ID (Romans 8 12).mp3"> Mp3</a> | Video</li>
+					<li>"My Two Sons" [10-18-09] (Luke 15:11) <a href="mp3s/2009/[10-18-09] My Two Sons (Luke 15 11).mp3"> Mp3</a> | Video</li>
+                    <li>"Father Days" [10-25-09] (Luke 15:20) <a href="mp3s/2009/[10-25-09] Father Days (Luke 15 20).mp3"> Mp3</a> | Video</li>
+				</ul>
+			</div>
+            <h3><a href="#">November</a></h3>
+			<div>
+				<ul>
+					<li>"Father Days Part 2 - Who's Your Daddy?" [11-01-09] (Luke 15:11) <a href="mp3s/2009/[11-01-09] Father Days 2 - Who's Your Daddy (Luke 15 11).mp3"> Mp3</a> | Video</li>
+					<li>"The Deal Breaker" [11-08-09] (Matthew 18:21) <a href="mp3s/2009/[11-08-09] The Deal Breaker (Matthew 18 21).mp3"> Mp3</a> | Video</li>
+					<li>"The Fruit of Forgiveness" [11-15-09] (Matthew 18:21) <a href="mp3s/2009/[11-15-09] The Fruit of Forgiveness (Matthew 18 21).mp3"> Mp3</a> | Video</li>
+                    <li>"Little Foxes" [11-22-09] (Song of Songs 2:15) <a href="mp3s/2009/[11-22-09] Little Foxes (Song of Songs 2 15).mp3"> Mp3</a> | Video</li>
+					<li>"Little Foxes Part 2" [11-29-09] (Song of Songs 2:15) <a href="mp3s/2009/[11-29-09] Little Foxes 2 (Song of Songs 2 15).mp3"> Mp3</a> | <a href="https://vimeo.com/46689807"> Video</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">December</a></h3>
+			<div>
+				<ul>
+					<li>"The Compass Of Worship" [12-06-09] (Matthew 2:1) <a href="mp3s/2009/[12-06-09] The Compass of Worship (Matthew 2 1).mp3"> Mp3</a> | Video</li>
+					<li>"The Blueprint Of A Bumpy Road" [12-13-09] (Jeremiah 29:11 - Luke 2:1) <a href="mp3s/2009/[12-13-09] The Blueprint of A Bumpy Road (Jeremiah 29 11 - Luke 2 1).mp3"> Mp3</a> | <a href="https://vimeo.com/46689808"> Video</a></li>
+					<li>"Silent Night" [12-27-09] (Luke 2:1) <a href="mp3s/2009/[12-27-09] Silent Night (Luke 2 1).mp3"> Mp3</a> | <a href="https://vimeo.com/9558121"> Video</a></li>
+				</ul>
+			</div>
+		
+        
+        
+        </div>
+	</div>
+
+<!--end of 2009 -->
+
+	<h3><a href="#">2008</a></h3>
+	<div>
+		<div class="accordion inner">
+			<h3><a href="#">January</a></h3>
+			<div>
+				<ul>
+					<li>"The Put in His Plan" [1-13-08] (Genesis 2:4) <a href="mp3s/2008/[01-13-08] The Put In His Plan (Genesis 2 4).mp3"> Mp3</a></li>
+					<li>"The Rust of Lust" [1-20-08] (James 1:13 - Genesis 2:1) <a href="mp3s/2008/[01-20-08] The Rust of Lust (James 1 13 - Genesis 2 1).mp3"> Mp3</a></li>
+					<li>"A Tree &amp; It's Fruit" [1-27-08] (Matthew 7:13) <a href="mp3s/2008/[01-27-08] A Tree And It's Fruit (Matthew 7 13).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">February</a></h3>
+			<div>
+				<ul>
+					<li>"The Gift That Reverses the Curse" [2-03-08] (Romans 5:12) <a href="mp3s/2008/[02-03-08] The Gift That Reverses The Curse (Romans 5 12).mp3"> Mp3</a></li>
+					<li>"Arise Or A Fall?" [2-10-08] (Genesis 3:1) <a href="mp3s/2008/[02-10-08] Arise or A Fall (Genesis 3 1).mp3"> Mp3</a></li>
+					<li>"The Heart Of The Matter" [2-17-08] (Matthew 15:1) <a href="mp3s/2008/[02-17-08] The Heart of The Matter (Matthew 15 1).mp3"> Mp3</a></li>
+                    <li>"No Vacancy" [2-24-08] (John 14:25) <a href="mp3s/2008/[02-24-08] No Vacancy (John 14 25).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">March</a></h3>
+			<div>
+				<ul>
+					<li>"Hearts of Fire" [3-02-08] (Acts 28:1) <a href="mp3s/2008/[03-02-08] Hearts of Fire (Acts 28 1).mp3"> Mp3</a></li>
+					<li>"A Light Degree of Seperation" [3-09-08] (2 Corinthians 6:1) <a href="mp3s/2008/[03-09-08] A Light Degree of Seperation (2 Corinthians 6 1).mp3"> Mp3</a></li>
+					<li>"Lessons From the Donkey" [3-16-08] (Luke 19:28) <a href="mp3s/2008/[03-16-08] Lessons From The Donkey (Luke 19 28).mp3"> Mp3</a></li>
+                    <li>"Golgotha &amp; Goliath" [3-23-08] (Matthew 27:32 - 1 Samuel 17:55) <a href="mp3s/2008/[03-23-08] Golgotha and Goliath (Matthew 27 32 - 1 Samuel 17 55).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">April</a></h3>
+			<div>
+				<ul>
+					<li>"Better Than It Should Be" [4-06-08] (Exodus 15:22) <a href="mp3s/2008/[04-06-08] Better Than It Should Be (Exodus 15 22).mp3"> Mp3</a></li>
+					<li>"The Wheels Being Set In Motion" [4-13-08] (Exodus 15:22) <a href="mp3s/2008/[04-13-08] The Wheels Being Set In Motion (Exodus 15 22).mp3"> Mp3</a></li>
+					<li>"An East Wind" [4-20-08] (Exodus 14:21) <a href="mp3s/2008/[04-20-08] An East Wind (Exodus 14 21).mp3"> Mp3</a></li>
+                    <li>"A Descision To Follow the Lord" [4-27-08] (Exodus 14:21) <a href="mp3s/2008/[04-27-08] A Descision To Follow The Lord (Exodus 14 21).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">May</a></h3>
+			<div>
+				<ul>
+					<li>"It's Time To Rise Up" [5-04-08] (Genesis 2:4) <a href="mp3s/2008/[05-04-08] Its Time To Rise Up (Genesis 2 4).mp3"> Mp3</a></li>
+					<li>"The Clothes That Momma Made" [5-11-08] (1 Samuel 2:18) <a href="mp3s/2008/[05-11-08] The Clothes That Mama Made (1 Samuel 2 18).mp3"> Mp3</a></li>
+					<li>"When Things Aren't Working At Home" [5-18-08] (Matthew 8:5) <a href="mp3s/2008/[05-18-08] When Things Aren't Working at Home (Matthew 8 5).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">June</a></h3>
+			<div>
+				<ul>
+					<li>"The First Penticost - Let the Fire Fall" [6-08-08] (Exodus 24:1) <a href="mp3s/2008/[06-08-08] The First Penticost - Let The Fire Fall (Exodus 24 1).mp3"> Mp3</a></li>
+					<li>"Re-digging Daddy's Well" [6-15-08] (Genesis) <a href="mp3s/2008/[06-15-08] Re-digging Daddys Wells (Genesis 26 1).mp3"> Mp3</a></li>
+					<li>"Strict Training" [6-29-08] (Genesis 26:12 - 1 Corinthians 9:24) <a href="mp3s/2008/[06-29-08] Strict Training (Genesis 26 12 - 1 Corinthians 9 24).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">July</a></h3>
+			<div>
+				<ul>
+					<li>"Run to Finish" [7-06-08] (1 Corinthians 9:24) <a href="mp3s/2008/[07-06-08] Run To Finish (1 Corinthians 9 24).mp3"> Mp3</a></li>
+					<li>"Training For Tomorrow" [7-13-08] (1 Corinthians 9:24) <a href="mp3s/2008/[07-13-08] Training For Tomorrow (1 Corinthians 9 24).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">August</a></h3>
+			<div>
+				<ul>
+					<li>"Tell A Vision" [8-03-08] (Mark 4:1) <a href="mp3s/2008/[08-03-08] Tell A Vision (Mark 4 1).mp3"> Mp3</a></li>
+					<li>"Vision for Victory" [8-10-08] (2 Corinthians 10:3) <a href="mp3s/2008/[08-10-08] Vision For Victory (2 Corinthians 10 3).mp3"> Mp3</a></li>
+					<li>"Armed Gaurd" [8-17-08] (Joshua 6:1) <a href="mp3s/2008/[08-17-08] Armed Gaurd (Joshua 6 1).mp3"> Mp3</a></li>
+                    <li>"Season to Press" [8-24-08] (Philippians 3:13) <a href="mp3s/2008/[08-24-08] Season To Press (Philippians 3 13).mp3"> Mp3</a></li>
+					<li>"Delivered Into Your Hands" [8-31-08] (Joshua 6:1) <a href="mp3s/2008/[08-31-08] Delivered Into Your Hands (Joshua 6 1).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">September</a></h3>
+			<div>
+				<ul>
+					<li>"The Last One In" [9-07-08] (John 5:1) <a href="mp3s/2008/[09-07-08] The Last One In (John 5 1).mp3"> Mp3</a></li>
+					<li>"Dead Excuses" [9-21-08] (John 5:1) <a href="mp3s/2008/[09-21-08] Dead Excuses (John 5 1).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">October</a></h3>
+			<div>
+				<ul>
+					<li>"The Witness of Faith" [10-05-08] (Hebrews 12:1) <a href="mp3s/2008/[10-05-08] The Witness of Faith (Hebrews 12 1).mp3"> Mp3</a></li>
+					<li>"The Witness of Faith Part 2" [10-12-08] (Hebrews 12:1) <a href="mp3s/2008/[10-12-08] The Witness of Faith 2 (Hebrews 12 1).mp3"> Mp3</a></li>
+					<li>"The Thought, Word, &amp; Action of Faith" [10-19-08] (Hebrews 12:1) <a href="mp3s/2008/[10-19-08] The Thought, Word, and Action of Faith (Exodus 14 10).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">November</a></h3>
+			<div>
+				<ul>
+					<li>"All About a Basket" [11-02-08] (Exodus 2:1) <a href="mp3s/2008/[11-02-08] All About A Basket (Exodus 2 1).mp3"> Mp3</a></li>
+					<li>"Preparing An Ark" [11-16-08] (Exodus 2:1) <a href="mp3s/2008/[11-16-08] Preparing An Ark (Exodus 2 1).mp3"> Mp3</a></li>
+					<li>"I Should Be Thankful For What?" [11-23-08] (Psalm 23:1) <a href="mp3s/2008/[11-23-08] I Should Be Thankful For What (Psalm 23 1).mp3"> Mp3</a></li>
+                    <li>"Have We Left Him At the Altar?" [11-30-08] (Luke 15:11) <a href="mp3s/2008/[11-30-08] Have We Left Him At The Altar (Luke 15 11).mp3"> Mp3</a></li>
+					<li>"What Did You Expect?" [11-30-08] (Luke 1:26) <a href="mp3s/2008/[11-30-08] What Did You Expect (Luke 1 26).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">December</a></h3>
+			<div>
+				<ul>
+					<li>"The Lord is With You" [12-14-08] (Luke 1:4) <a href="mp3s/2008/[12-14-08] The Lord Is With You (Luke 1 4).mp3"> Mp3</a></li>
+					<li>"Hope" [12-21-08] (Luke 2:8) <a href="mp3s/2008/[12-21-08] Hope (Luke 2 8).mp3"> Mp3</a></li>
+					<li>"Jesus Made An Inn" [12-28-08] (Luke 2:4) <a href="mp3s/2008/[12-28-08] Jesus Made An Inn (Luke 2 4).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+		
+        
+        
+        </div>
+	</div>
+
+<!--end of 2008 -->
+
+	<h3><a href="#">2007</a></h3>
+	<div>
+		<div class="accordion inner">
+			<h3><a href="#">January</a></h3>
+			<div>
+				<ul>
+					<li>"The Trinity of Christianity" [1-07-07] (Matthew 25:1) <a href="mp3s/2007/[01-07-07] The Trinity of Christianity (Matthew 25 1).mp3"> Mp3</a></li>
+					<li>"Bread or Bubblegum" [1-14-07] (Matthew 25:31) <a href="mp3s/2007/[01-14-07] Bread or Bubblegum (Matthew 25 31).mp3"> Mp3</a></li>
+					<li>"The Master Key is the Masters Key" [1-28-07] (Matthew 16:13) <a href="mp3s/2007/[01-28-07] The Master Key Is The Masters Key (Matthew 16 13).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">February</a></h3>
+			<div>
+				<ul>
+					<li>"One In the Hand Is Worth In the Book" [2-04-07] (Matthew 3:1) <a href="mp3s/2007/[02-04-07] One In The Hand Is Worth Two In The Book (Matthew 3 1).mp3"> Mp3</a></li>
+					<li>"The Greatest Marrige Crisis" [2-11-07] (Proverbs 18:21) <a href="mp3s/2007/[02-11-07] The Greatest Marrige Crisis (Proverbs 18 21 - Genesis 2 15).mp3"> Mp3</a></li>
+					<li>"The Greatest Marrige Crisis Part 2" [2-18-07] (Genesis 2:15) <a href="mp3s/2007/[02-18-07] The Greatest Marrige Crisis 2 (Genesis 2 15).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">March</a></h3>
+			<div>
+				<ul>
+					<li>"How Does a Person Change?" [3-04-07] (Genesis 3:1) <a href="mp3s/2007/[03-04-07] How Does A Person Changes (Genesis 3 1).mp3"> Mp3</a></li>
+					<li>"How Does a Person Change? Part 2" [3-11-07] (Genesis 3:1) <a href="mp3s/2007/[03-11-07] How Does A Person Change 2 (Genesis 3 1).mp3"> Mp3</a></li>
+					<li>"A Tale of Two Mirrors" [3-18-07] (Genesis 3:1) <a href="mp3s/2007/[03-04-07] How Does A Person Changes (Genesis 3 1).mp3"> Mp3</a></li>
+                    <li>"How Does a Person Change? Part 3" [3-25-07] (Genesis 3:1) <a href="mp3s/2007/[03-25-07] How Does A Person Change 3 (Genesis 3 1).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">April</a></h3>
+			<div>
+				<ul>
+					<li>"The Father of Lies" [4-01-07] (John 8:42) <a href="mp3s/2007/[04-01-07] The Father of Lies (John 8 42).mp3"> Mp3</a></li>
+					<li>"Setting Your Joy" [4-08-07] (Hebrews 12:1) <a href="mp3s/2007/[04-08-07] Setting Your Joy (Hebrews 12 1).mp3"> Mp3</a></li>
+					<li>"Denial" [4-15-07] (Mark 14:27) <a href="mp3s/2007/[04-15-07] Denial (Mark 14 27).mp3"> Mp3</a></li>
+                    <li>"In the Light" [4-22-07] (Matthew 11:28) <a href="mp3s/2007/[04-22-07] In The Light (Matthew 11 28).mp3"> Mp3</a></li>
+                    <li>"Now" [4-29-07] (Hebrews 10:35) <a href="mp3s/2007/[04-29-07] Now (Hebrews 10 35).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">May</a></h3>
+			<div>
+				<ul>
+					<li>"Get In the Now" [5-06-07] (Hebrews 11:1) <a href="mp3s/2007/[05-06-07] Get In The Now (Hebrews 11 1).mp3"> Mp3</a></li>
+					<li>"It's Not That Hard" [5-13-07] (Exodus 4:1) <a href="mp3s/2007/[05-13-07] It's Not That Hard (Exodus 4 1).mp3"> Mp3</a></li>
+					<li>"Crooked Paths" [5-20-07] (Luke 3:3) <a href="mp3s/2007/[05-20-07] Crooked Paths (Luke 3 3).mp3"> Mp3</a></li>
+                    <li>"It's Catching" [5-27-07] (John 21:1) <a href="mp3s/2007/[05-27-07] It's Catching (John 21 1).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">June</a></h3>
+			<div>
+				<ul>
+					<li>"Get Down" [6-03-07] (Mark 5:21) <a href="mp3s/2007/[06-03-07] Get Down (Mark 5 21).mp3"> Mp3</a></li>
+					<li>"The Simplest Thing I Never Heard" [6-17-07] (Galatians 4:1) <a href="mp3s/2007/[06-17-07] The Simplest Thing I Never Heard (Galatians 4 1).mp3"> Mp3</a></li>
+					<li>"Get Down" [6-03-07] (Mark 5:21) <a href="mp3s/2007/[06-03-07] Get Down (Mark 5 21).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">July</a></h3>
+			<div>
+				<ul>
+					<li>"Hold On" [7-08-07] (John 8:31) <a href="mp3s/2007/[07-08-07] Hold On (John 8 31).mp3"> Mp3</a></li>
+					<li>>"Hold On Part 2" [7-15-07] (John 8:31) <a href="mp3s/2007/[07-15-07] Hold On 2 (John 8 31).mp3"> Mp3</a></li>
+					<li>>"The Bewitching of This Generation" [7-22-07] (Galatians 3:1) <a href="mp3s/2007/[07-22-07] The Bewitching of This Generation (Galatians 3 1).mp3"> Mp3</a></li>
+                    <li>>"Sending Out an S.O.S." [7-29-07] (Mark 4:35) <a href="mp3s/2007/[07-29-07] Sending Out An S.O.S (Mark 4 35).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">August</a></h3>
+			<div>
+				<ul>
+					<li>"Pork Bellies" [8-12-07] (Mark 5:11) <a href="mp3s/2007/[08-12-07] Pork Bellies (Mark 5 11).mp3"> Mp3</a></li>
+					<li>"The Ties That Bind" [8-26-07] (Mark 3:27) <a href="mp3s/2007/[08-26-07] The Ties That Bind (Mark 3 27).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">September</a></h3>
+			<div>
+				<ul>
+					<li>"Moving On" [9-02-07] (Exodus 14:13) <a href="mp3s/2007/[09-02-07] Moving On (Exodus 14 13).mp3"> Mp3</a></li>
+					<li>"America's Bridge is Falling Down" [9-05-07] (Matthew 7:24) <a href="mp3s/2007/[09-05-07] America's Bridge Falling Down (Matthew 7 24).mp3"> Mp3</a></li>
+					<li>"Fruit &amp; Faith" [9-09-07] (Numbers 12:23) <a href="mp3s/2007/[09-09-07] Fruit And Faith (Numbers 12 23).mp3"> Mp3</a></li>
+                    <li>"Time &amp; Change" [9-16-07] (Ecclesiastes 9:11) <a href="mp3s/2007/[09-16-07] Time And Chance (Ecclesiastes 9 11).mp3"> Mp3</a></li>
+					<li>"Being Paid For" [9-23-07] (1 Corinthians 6:18) <a href="mp3s/2007/[09-23-07] Being Paid For (1 Corinthians 6 18).mp3"> Mp3</a></li>
+					<li>"Power of Ten" [9-20-07] (Daniel 1:20) <a href="mp3s/2007/[09-30-07] Power of Ten (Daniel 1 20).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">October</a></h3>
+			<div>
+				<ul>
+					<li>"Ten Times Better" [10-07-07] (Daniel 1:11) <a href="mp3s/2007/[10-07-07] 10 Times Better (Daniel 1 11).mp3"> Mp3</a></li>
+					<li>"Changing Headlines" [10-14-07] (Daniel 1:3) <a href="mp3s/2007/[10-14-07] Changing Headlines (Daniel 1 3).mp3"> Mp3</a></li>
+					<li>"Remember &amp; Release" [10-28-07] (Genesis 40:1) <a href="mp3s/2007/[10-28-07] Remember and Release (Genesis 40 1).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">November</a></h3>
+			<div>
+				<ul>
+					<li>"Getting Ready To Be Taken Up" [11-04-07] (Genesis 50:22) <a href="mp3s/2007/[11-04-07] Getting Ready To Be Taken Up (Genesis 50 22).mp3"> </a></li>
+					<li>"Proper Burial, Powerful Ressurection" [11-11-07] (Joshua 24:32 - John 4:4) <a href="mp3s/2007/[11-11-07] Proper Burial, Powerful Ressurection (Joshua 24 32 - John 4 4).mp3"> </a></li>
+					<li>"The Winds of Change" [11-18-07] (Genesis 47:18) <a href="mp3s/2007/[11-18-07] The Winds of Change (Genesis 47 18).mp3"> </a></li>
+                    <li>"Deal or No Deal" [11-25-07] (Exodus 1:6) <a href="mp3s/2007/[11-25-07] Deal or No Deal (Exodus 1 6).mp3"> </a></li>
+				</ul>
+			</div>
+            <h3><a href="#">December</a></h3>
+			<div>
+				<ul>
+					<li>"Deal or No Deal Part 2" [12-02-07] (Exodus 1:18) <a href="mp3s/2007/[12-02-07] Deal or No Deal 2 (Exodus 1 8).mp3"> Mp3</a></li>
+					<li>"Fishing for Provision" [12-09-07] (Matthew 17:24) <a href="mp3s/2007/[12-09-07] Fishing For Provision (Mathew 17 24).mp3"> Mp3</a></li>
+					<li>"The Government of Christ" [12-14-07] (Isaiah 9:6) <a href="mp3s/2007/[12-14-07] The Government of Christ (Isaiah 9 6).mp3"> Mp3</a></li>
+                    <li>"From the Cradle to the Cross" [12-23-07] (Isaiah 9:6) <a href="mp3s/2007/[12-23-07] From The Cradle To The Cross (Isaiah 9 6).mp3"> Mp3</a></li>
+                    <li>"Hide &amp; Seek" [12-30-07] (Matthew 2:13) <a href="mp3s/2007/[12-30-07] Hide and Seek (Matthew 2 13).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+		
+        
+        
+        </div>
+	</div>
+
+<!--end of 2007 -->
+
+	<h3><a href="#">2006</a></h3>
+	<div>
+		<div class="accordion inner">
+			<h3><a href="#">January</a></h3>
+			<div>
+				<ul>
+					<li>"How Stable is Your Stable?" [1-01-06] (Luke 2:1) <a href="mp3s/2006/[01-01-06] How Stable Is Your Stable (Luke 2 1).mp3"> Mp3</a></li>
+					<li>"Basket Case" [1-08-06] (Acts 9:23) <a href="mp3s/2006/[01-08-06] Basket Case (Acts 9 23).mp3"> Mp3</a></li>
+					<li>"The Color Purple" [1-15-06] (Acts 16:13) <a href="mp3s/2006/[01-15-06] The Color Purple (Acts 16 13).mp3"> Mp3</a></li>
+                    <li>"The Cross Or the Plank" [1-22-06] (Matthew 7:1) <a href="mp3s/2006/[01-22-06] The Cross or The Plank (Matthew 7 1).mp3"> Mp3</a></li>
+                    <li>"Two Trees in the Garden" [1-29-06] (Matthew 14:22) <a href="mp3s/2006/[01-29-06] Two Trees In The Garden (Matthew 14 22).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">February</a></h3>
+			<div>
+				<ul>
+					<li>"Bloody Jesus" [2-05-06] (Exodus 12:1) <a href="mp3s/2006/[02-05-06] Bloody Jesus (Exodus 12 1).mp3"> Mp3</a></li>
+					<li>"What's Love Got to Do With It?" [2-19-06] (Luke 7:36) <a href="mp3s/2006/[02-19-06] Whats Love Got To Do With It (Luke 7 36).mp3"> Mp3</a></li>
+					<li>"The Fruit of the Root" [2-26-06] (Galatians 5:22) <a href="mp3s/2006/[02-26-06] The Fruit of The Root (Galatians 5 22).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">March</a></h3>
+			<div>
+				<ul>
+					<li>"Don't Bear the Care" [3-05-06] (1 Peter 5:7) <a href="mp3s/2006/[03-05-06] Don't Bear The Care (1 Peter 5 7).mp3"> Mp3 </a></li>
+					<li>"Don't Bear the Care Part 2" [3-12-06] (1 Peter 5:7) <a href="mp3s/2006/[03-12-06] Don't Bear The Care 2 (1 Peter 5 7).mp3"> Mp3 </a></li>
+					<li>"Don't Bear the Care Part 3 - Overwelmed" [3-19-06] (1 Peter 5:6) <a href="mp3s/2006/[03-19-06] Don't Bear The Care 3 - Overwelmed (1 Peter 5 6).mp3"> Mp3 </a></li>
+                    <li>"Don't Bear the Care Part 4 - Worry Worms" [3-26-06] (1 Peter 5:6) <a href="mp3s/2006/[03-26-06] Don't Bear The Care 4 - Worry Worms (1 Peter 5 6).mp3"> Mp3 </a></li>
+				</ul>
+			</div>
+			<h3><a href="#">April</a></h3>
+			<div>
+				<ul>
+					<li>"The Wrong Way" [4-02-06] (Luke 24:13) <a href="mp3s/2006/[04-02-06] The Wrong Way (Luke 24 13).mp3"> Mp3 </a></li>
+					<li>"Empty Tomb &amp; Old Clothes" [4-16-06] (Matthew 27:62) <a href="mp3s/2006/[04-16-06] Empty Tomb and Old Clothes (Matthew 27 62).mp3"> Mp3 </a></li>
+					<li>"Broken Seals &amp; Molded Clay" [4-23-06] (Matthew 27:62) <a href="mp3s/2006/[04-23-06] Broken Seals & Molded Clay (Matthew 27 62).mp3"> Mp3 </a></li>
+                    <li>"Flip It" [4-30-06] (Genesis 50:19) <a href="mp3s/2006/[04-30-06] Flip It (Genesis 50 19).mp3"> Mp3 </a></li>
+				</ul>
+			</div>
+            <h3><a href="#">May</a></h3>
+			<div>
+				<ul>
+					<li>"Who's the Man?" [5-07-06] (Ephesians 4:22) <a href="mp3s/2006/[05-07-06] Who's The Man (Ephesians 4 22).mp3"> Mp3</a></li>
+					<li>"Cut the Cord" [5-14-06] (John 3:3 - Ephesians 4:22) <a href="mp3s/2006/[05-14-06] Cut The Cord (John 3 3 - Ephesians 4 22).mp3"> Mp3</a></li>
+					<li>"The Flies of Pride" [5-21-06] (Ecclesiastes 10:1) <a href="mp3s/2006/[05-21-06] The Flies of Pride (Ecclesiastes 10 1).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">June</a></h3>
+			<div>
+				<ul>
+					<li>"Do You See What God Sees?" [6-04-06] (1 Samuel 16:1) <a href="mp3s/2006/[06-04-06] Do You See What God Sees (1 Samuel 16 1).mp3"> Mp3</a></li>
+					<li>"Inspire or Expire" [6-04-06] (1 Corinthians 3:17) <a href="mp3s/2006/[06-04-06] Inspire or Expire (1 Corinthians 3 17).mp3"> Mp3</a></li>
+					<li>"What's In a Name?" [6-11-06] (1 Samuel 16:3) <a href="mp3s/2006/[06-11-06] What's In A Name (1 Samuel 16 3).mp3"> Mp3</a></li>
+                    <li>"Father Figure" [6-18-06] (1 Corintians 4:15) <a href="mp3s/2006/[06-18-06] Father Figure (1 Corinthians 4 15).mp3"> Mp3</a></li>
+                    <li>"What's Leading You?" [6-25-06] (Judges 16:26) <a href="mp3s/2006/[06-25-06] What's Leading You (Judges 16 26).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">July</a></h3>
+			<div>
+				<ul>
+					<li>"Touch Me Again" [7-09-06] (Luke 3:22) <a href="mp3s/2006/[07-09-06] Touch Me Again (Luke 3 22).mp3"> Mp3</a></li>
+					<li>"The Blessing of Judgement" [7-16-06] (1 Corinthians 11:31) <a href="mp3s/2006/[07-16-06] The Blessing of Judgement (1 Corinthians 11 31).mp3"> Mp3</a></li>
+					<li>"Get a Handle On Yourself" [7-30-06] (Luke 4:1) <a href="mp3s/2006/[07-30-06] Get A Handle On Yourself (Luke 4 1).mp3"> Mp3</a></li>
+                    <li>"Get a Handle On Yourself Part 2" [7-30-06] (Matthew 4) <a href="mp3s/2006/[07-30-06] Get A Handle On Yourself 2 (Matthew 4).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">August</a></h3>
+			<div>
+				<ul>
+					<li>"Deliverance" [8-13-06] (Matthew 2:21) <a href="mp3s/2006/[08-13-06] Deliverance (Matthew 2 21).mp3"> Mp3</a></li>
+					<li>"Don't Miss Your Appointment" [8-20-06] (Revelation 22:12) <a href="mp3s/2006/[08-20-06] Don't Miss Your Appointment (Revelation 22 12).mp3"> Mp3</a></li>
+					<li>"Don't Miss Your Appointment Part 2" [8-27-06] (Luke 4:18) <a href="mp3s/2006/[08-27-06] Don't Miss Your Appointment 2 (Luke 4 18).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">September</a></h3>
+			<div>
+				<ul>
+					<li>"Right Lane Must Stay Straight" [9-03-06] (Deuteronomy 5:32) <a href="mp3s/2006/[09-03-06] Right Lane Must Stay Straight (Deuteronomy 5 32).mp3">Mp3 </a></li>
+					<li>"A Seed For Harvest" [9-10-06] (Genesis 8:22) <a href="mp3s/2006/[09-10-06] A Seed For Harvest (Genesis 8 22).mp3">Mp3 </a></li>
+					<li>"Shaken &amp; Stirred" [9-17-06] (Matthew 21:10) <a href="mp3s/2006/[09-17-06] Shaken and Stirred (Matthew 21 10).mp3">Mp3 </a></li>
+                    <li>"Power &amp; Authority" [9-24-06] (2 Corinthians 10:4) <a href="mp3s/2006/[09-24-06] Power and Authority (2 Corinthians 10 4).mp3">Mp3 </a></li>
+				</ul>
+			</div>
+            <h3><a href="#">October</a></h3>
+			<div>
+				<ul>
+					<li>"Loose That Donkey &amp; Let Him Go" [10-01-06] (Matthew 21:1) <a href="mp3s/2006/[10-01-06] Loose That Donkey and Let Him Go (Matthew 21 1).mp3"> Mp3</a></li>
+					<li>"Just Choose" [10-08-06] (Deuteronomy 30:19) <a href="mp3s/2006/[10-08-06] Just Choose (Deuteronomy 30 19).mp3"> Mp3</a></li>
+					<li>"Stick &amp; Stand" [10-15-06] (Proverbs 18:24) <a href="mp3s/2006/[10-15-06] Stick And Stand (Proverbs 18 24).mp3"> Mp3</a></li>
+                    <li>"Step Up" [10-22-06] (Luke 19:1) <a href="mp3s/2006/[10-22-06] Step Up (Luke 19 1).mp3"> Mp3</a></li>
+                    <li>"Step Up Again" [10-29-06] (Luke 19:1) <a href="mp3s/2006/[10-29-06] Step Up Again (Luke 19 1).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">November</a></h3>
+			<div>
+				<ul>
+					<li>"More" [11-12-06] (Luke 19:1) <a href="mp3s/2006/[11-12-06] More (Luke 19 1).mp3"> Mp3</a></li>
+					<li>"The Judgeship of God" [11-19-06] (Hebrews 12:23) <a href="mp3s/2006/[11-19-06] The Judgeship of God (Hebrews 12 23).mp3"> Mp3</a></li>
+					<li>"We've Got All That" [11-26-06] (Hebrews 12:23) <a href="mp3s/2006/[11-26-06] We've Got All That (Hebrews 12 23).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">December</a></h3>
+			<div>
+				<ul>
+					<li>"Biblical Faith" [12-03-06] (Hebrews 11:1) <a href="mp3s/2006/[12-03-06] Biblical Faith (Hebrews 11 1).mp3"> Mp3</a></li>
+					<li>"Walking, Standing + Sitting" [12-10-06] (Psalm 1:1) <a href="mp3s/2006/[12-10-06] Walking, Standing, + Sitting (Psalm 1 1).mp3"> Mp3</a></li>
+					<li>"Advancement + Blessing" [12-17-06] (Psalm 1:1) <a href="mp3s/2006/[12-17-06] Advancement + Blessing (Psalm 1 1).mp3"> Mp3</a></li>
+                    <li>"Message Of the Manger" [12-24-06] (Luke 2:1) <a href="mp3s/2006/[12-24-06] Message of the Manger (Luke 2 1).mp3"> Mp3</a></li>
+                    <li>"He's Returning For a Return" [12-31-06] (Matthew 25:14) <a href="mp3s/2006/[12-31-06] He's Returning For A Return (Matthew 25 14).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+		
+        
+        
+        </div>
+	</div>
+
+<!--end of 2006 -->
+
+<h3><a href="#">2005</a></h3>
+	<div>
+		<div class="accordion inner">
+			<h3><a href="#">January</a></h3>
+			<div>
+				<ul>
+					<li>"Dream On" [1-02-05] (Genesis 37:1) <a href="mp3s/2005/[01-02-05] Dream On (Genesis 37 1).mp3">Mp3</a></li>
+					<li>"Dream On Part 2" [1-09-05] (Hebrews 12:1) <a href="mp3s/2005/[01-09-05] Dream On 2 - Born To Run (Hebrews 12 1).mp3">Mp3</a></li>
+					<li>"Dream On Part 3" [1-16-05] (Genesis 1:26) <a href="mp3s/2005/[01-16-05] Dream On  3 - I've Been Made (Genesis 1 26).mp3">Mp3</a> </li>
+                    <li>"The Fall and The Spring" [1-30-05] <a href="mp3s/2005/[01-30-05] The Fall and The Spring.mp3">Mp3</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">February</a></h3>
+			<div>
+				<ul>
+					<li>"You Are Mad &amp; Created" [2-06-05] (Genesis 1:26) <a href="mp3s/2005/[02-06-05] You Are Made & Created (Genesis 1 26).mp3">Mp3</a></li>
+					<li>The Conduct of Kings" [2-13-05] (Matthew 22:34) <a href="mp3s/2005/[02-13-05] The Conduct of Kings (Matthew 22 34).mp3">Mp3</a></li>
+					<li>A Kings Clothes" [2-27-05] (Romans 3:14) <a href="mp3s/2005/[02-27-05] A Kings Clothes (Revelation 3 14).mp3">Mp3</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">March</a></h3>
+			<div>
+				<ul>
+					<li>"The Defining Issue" [3-06-05] (John 4:1)<a href="mp3s/2005/[03-06-05] The Defining Issue (John 4 1).mp3"> Mp3</a></li>
+					<li>"Passing the Test" [3-20-05] (James 1:12)<a href="mp3s/2005/[03-20-05] Passing The Test (James 1 12).mp3"> Mp3</a></li>
+					<li>"The Man in the Mirror" [3-26-05] (James 1:12)<a href="mp3s/2005/[03-26-05] The Man In The Mirror (James 1 12).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">April</a></h3>
+			<div>
+				<ul>
+					<li>"The Man in the Mirror Part 2" [4-03-05] (James 1:12) <a href="mp3s/2005/[04-03-05] The Man In The Mirror 2 (James 1 12).mp3"> Mp3</a></li>
+					<li>"Esteem the Seed" [4-10-05] (Hebrews 11:1) <a href="mp3s/2005/[04-10-05] Esteem The Seed (Hebrwes 11 1).mp3"> Mp3</a></li>
+					<li>"Esteem the Seed Part 2" [4-17-05] (Hebrews 11:1) <a href="mp3s/2005/[04-17-05] Esteem The Seed 2 (Hebrews 11 1).mp3"> Mp3</a></li>
+                    <li>"Roots, Fruits, Seeds, and Trees" [4-24-05] (Matthew 13:1) <a href="mp3s/2005/[04-24-05] Roots, Fruits, Seeds, and Trees (Matthew 13 1).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">May</a></h3>
+			<div>
+				<ul>
+					<li>"Roots the Win" [5-01-05] (Matthew 13:18) <a href="mp3s/2005/[05-01-05] Roots That Win (Matthew 13 18).mp3"> Mp3</a></li>
+					<li>"Sewing for Your Children" [5-08-05] (1 Samuel 2:18) <a href="mp3s/2005/[05-08-05] Sowing For Your Children (1 Samuel 2 18).mp3"> Mp3</a></li>
+					<li>"Get a Backbone" [5-22-05] (Ephesians 6:10) <a href="mp3s/2005/[05-22-05] Get A Backbone (Ephesians 6 10).mp3"> Mp3</a></li>
+                    <li>"Rise Up" [5-29-05] (Ephesians 6:10) <a href="mp3s/2005/[05-29-05] Rise Up (Ephesians 6 10).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">June</a></h3>
+			<div>
+				<ul>
+					<li>"Stand Your Ground" [6-05-05] (Ephesians 6:10) <a href="mp3s/2005/[06-05-05] Stand Your Ground (Ephesians 6 10).mp3"> Mp3</a></li>
+					<li>"Buried Treasure" [6-12-05] (Matthew 13:44) <a href="mp3s/2005/[06-12-05] Buried Treasure (Matthew 13 44).mp3"> Mp3</a></li>
+					<li>"Living On the Edge" [6-26-05] (Mark 5:21) <a href="mp3s/2005/[06-26-05] Living On The Edge (Mark 5 21).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">July</a></h3>
+			<div>
+				<ul>
+					<li>"Swords" [7-10-05] (Ephesians 6:10) <a href="mp3s/2005/[07-10-05] Swords (Ephesians 6 10).mp3"> Mp3</a></li>
+					<li>"Get a Grip" [7-17-05] (Ephesians 6:10) <a href="mp3s/2005/[07-17-05] Get A Grip (Ephesians 6 10).mp3"> Mp3</a></li>
+					<li>"Raising the Bar" [7-24-05] (Matthew 25:14) <a href="mp3s/2005/[07-24-05] Raising The Bar (Matthew 25 14).mp3"> Mp3</a></li>
+                    <li>"Raising the Bar of Maturity" [7-31-05] (Matthew 5:43) <a href="mp3s/2005/[07-31-05] Raising The Bar Of Maturity (Matthew 5 43).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">August</a></h3>
+			<div>
+				<ul>
+					<li>"Raising the Bar of Focus" [8-07-05] (Matthew 5:43) <a href="mp3s/2005/[08-07-05] Raising The Bar of Focus (Matthew 5 43).mp3"> Mp3 </a></li>
+					<li>"Lessons From Lot" [8-14-05] (Genesis 19:12) <a href="mp3s/2005/[08-14-05] Lessons From Lot (Genesis 19 12).mp3"> Mp3 </a></li>
+					<li>"Where Do You Stand?" [8-21-05] (Matthew 20:1) <a href="mp3s/2005/[08-21-05] Where Do You Stand (Matthew 20 1).mp3"> Mp3 </a></li>
+                    <li>"Keeping Your Vision" [8-28-05] (Deuteronomy 34:1) <a href="mp3s/2005/[08-28-05] Keeping Your Vision (Deuteronomy 34 1).mp3"> Mp3 </a></li>
+				</ul>
+			</div>
+            <h3><a href="#">September</a></h3>
+			<div>
+				<ul>
+					<li>"The Son is Heating Up" [9-04-05] (Genesis 11:1) <a href="mp3s/2005/[09-04-05] The Son Is Heating Up (Genesis 11 1).mp3"> Mp3</a></li>
+					<li>"Walking in the Light" [9-11-05] (1 John 1:5) <a href="mp3s/2005/[09-11-05] Walking In The Light (1 John 1 5).mp3"> Mp3</a></li>
+					<li>"Brokeness" [9-18-05] (Psalm 34:1) <a href="mp3s/2005/[09-18-05] Brokeness (Psalm 34 1).mp3"> Mp3</a></li>
+                    <li>"The Greatest Power On Earth" [9-25-05] (Genesis 3:1) <a href="mp3s/2005/[09-25-05] The Greatest Power On Earth (Genesis 3 1).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">October</a></h3>
+			<div>
+				<ul>
+					<li>"Choices &amp; Opportunities" [10-02-05] (Genesis 3:1) <a href="mp3s/2005/[10-02-05] Choices & Opportunities (Genesis 3 1).mp3"> Mp3 </a></li>
+					<li>"The Fall &amp; the Spring" [10-09-05] (Proverbs 24:16) <a href="mp3s/2005/[10-09-05] The Fall & The Spring (Proverbs 24 16).mp3"> Mp3 </a></li>
+					<li>"How Do We Get There From Here?" [10-16-05] (1 Kings 17:1) <a href="mp3s/2005/[10-16-05] How Do We Get There From Here (1 Kings 17 1).mp3"> Mp3 </a></li>
+                    <li>"Roar" [10-23-05] (1 Peter 4:12) <a href="mp3s/2005/[10-23-05] Roar (1 Peter 4 12).mp3"> Mp3 </a></li>
+                    <li>"Change Your Epilogue" [10-30-05] (1 Chronicles 29:26) <a href="mp3s/2005/[10-30-05] Change Your Epilogue (1 Chronicles 29 26).mp3"> Mp3 </a></li>
+				</ul>
+			</div>
+            <h3><a href="#">November</a></h3>
+			<div>
+				<ul>
+					<li>"Tables &amp; Toilets - Your Epilogue" [11-06-05] (1 Chronicles 29:26) <a href="mp3s/2005/[11-06-05] Tables & Toilets - Your Epilouge (1 Chronicles 29 26).mp3"> Mp3</a></li>
+					<li>"Change Your Epilogue - Starting" [11-13-05] (1 Chronicles 29:26) <a href="mp3s/2005/[11-13-05] Change Your Epilogue - Starting (1 Chronicles 29 26).mp3"> Mp3</a></li>
+					<li>"Thankfulness" [11-20-05] (Psalm 23:1) <a href="mp3s/2005/[11-20-05] Thankfulness (Psalm 23 1).mp3"> Mp3</a></li>
+                    <li>"Prison Break" [11-27-05] (1 Samuel 16:1) <a href="mp3s/2005/[11-27-05] Prison Break (1 Samuel 16 1).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            <h3><a href="#">December</a></h3>
+			<div>
+				<ul>
+					<li>"Person &amp; Principles" [12-04-05] (1 Samuel 16:1) <a href="mp3s/2005/[12-04-05] Person And Principles (1 Samuel 16 1).mp3"> Mp3 </a></li>
+					<li>"Stay in the Saddle" [12-11-05] (Luke 2:1) <a href="mp3s/2005/[12-11-05] Stay In The Saddle (Luke 2 1).mp3"> Mp3 </a></li>
+				</ul>
+			</div>
+		
+        
+        
+        </div>
+	</div>
+    
+    <!-- End of 2005 -->
+    
+
+<h3><a href="#">2004</a></h3>
+	<div>
+		<div class="accordion inner">
+			<h3><a href="#">August</a></h3>
+			<div>
+				<ul>
+					<li>"The Narrow Gate" [8-01-04] (Matthew 7:7) <a href="mp3s/2004/[08-01-04] The Narrow Gate (Matthew 7 7).mp3"> Mp3</a></li>
+                    <li>"Fruit That Feeds &amp; Seeds" [8-08-04] (Matthew 7:13) <a href="mp3s/2004/[08-08-04] Fruit That Feeds and Seeds (Matthew 7 13).mp3"> Mp3</a></li>
+                    <li>"Fruit That Feeds &amp; Seeds Part 2" [8-22-04] (Matthew 7:13) <a href="mp3s/2004/[08-22-04] Fruit That Feeds and Seeds 3 (Matthew 7 13).mp3"> Mp3</a></li>
+                
+                </ul>
+			</div>
+			<h3><a href="#">September</a></h3>
+			<div>
+				<ul>
+					<li>"Parable Of Two Sons" [9-05-04] (Luke 15:11) <a href="mp3s/2004/[09-05-04] Parable of Two Sons (Luke 15 11).mp3"> Mp3</a></li>
+                    <li>"Parable Of Two Sons Part 2" [9-12-04] (Luke 15:11) <a href="mp3s/2004/[09-12-04] Parable of Two Sons 2 (Luke 15 11).mp3"> Mp3</a></li>
+                    <li>"Parable Of Two Sons Part 3" [9-19-04] (Luke 15:11) <a href="mp3s/2004/[09-19-04] Parable of Two Sons 3 (Luke 15 11).mp3"> Mp3</a></li>
+                    <li>"Parable Of Two Sons Part 4" [9-26-04] (Luke 15:11) <a href="mp3s/2004/[09-26-04] Parable of Two Sons 4 (Luke 15 11).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">October</a></h3>
+			<div>
+				<ul>
+					<li>"Parable Of Two Sons Part 5" [10-03-04] (Luke 15:11) <a href="mp3s/2004/[10-03-04] Parable of Two Sons 5 (Luke 15 11).mp3"> Mp3</a></li>
+					<li>"Parable Of Two Sons Part 6" [10-10-04] (Luke 15:11)<a href="mp3s/2004/[10-10-04] Parable of Two Sons 6 (Luke 15 11).mp3"> Mp3</a></li>
+					<li>"Recieving Your Share" [10-17-04] (Luke 15:11)<a href="mp3s/2004/[10-17-04] Recieving Your Share (Luke 15 11).mp3"> Mp3</a></li>
+                    <li>"Recieving Your Share Part 2" [10-24-04] (Romans 1:17) <a href="mp3s/2004/[10-24-04] Recieving Your Share 2 (Romans 1 17).mp3"> Mp3</a></li>
+                    <li>"Preserving Principles" [10-31-04] (Ephesians 6:10) <a href="mp3s/2004/[10-31-04] Preserving Principles (Ephesians 6 10).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+			<h3><a href="#">November</a></h3>
+			<div>
+				<ul>
+					<li>"Don't Give Up" [11-07-04] (Luke 18:21) <a href="mp3s/2004/[11-07-04] Don't Give Up (Luke 18 21).mp3"> Mp3</a></li>
+                    <li>"Divine Wine" [11-14-04] (John 2:1) <a href="mp3s/2004/[11-14-04] Divine Wine (John 2 1).mp3"> Mp3</a></li>
+                    <li>"Letters From The Ground" [11-21-04] (John 8:1) <a href="mp3s/2004/[11-21-04] Letters From The Ground (John 8 1).mp3"> Mp3</a></li>
+                    <li>"Lessons From The Ground" [11-28-04] (Luke 10:25) <a href="mp3s/2004/[11-28-04] Lessons From The Ground (Luke 10 25).mp3"> Mp3</a></li>
+                    
+				</ul>
+			</div>
+            <h3><a href="#">December</a></h3>
+			<div>
+				<ul>
+					<li>"Life &amp; Death" [12-12-04] (Joshua 1:1) <a href="mp3s/2004/[12-12-04] Life and Death (Joshua 1 1).mp3"> Mp3</a></li>
+                    <li>"Gifts For A Saviour" [12-19-04] (Matthew 2:1) <a href="mp3s/2004/[12-19-04] Gifts For A Savior (Matthew 2 1).mp3"> Mp3</a></li>
+                    <li>"Problems With The Promise" [12-26-04] (Luke 2:1) <a href="mp3s/2004/[12-26-04] Problems With The Promise (Luke 2 1).mp3"> Mp3</a></li>
+				</ul>
+			</div>
+            
+		
+        
+        
+        </div>
+	</div>
+
+
+
+</div> <!--End of "Accordion" DIV -->
+
+
+
+
+
+
+</body>
+</html>

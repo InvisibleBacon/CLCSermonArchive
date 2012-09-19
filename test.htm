@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Test</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.dataTables.js"></script>
+	<script type="text/javascript" src="jquery.dataTables.rowGrouping.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#sermons").dataTable({
+				sAjaxSource: "data.js",
+				//"aaSorting": [[0, "desc"]],
+				aoColumnDefs: [
+				//{ "asSorting": ["asc"], "aTargets": [0] }
+				],
+				bPaginate: false,
+				fnRowCallback: function(nRow, aData, iDisplayIndex) {
+					$("td:eq(0)", nRow).text(new Date(Date.parse(aData[1])).toString().split(" ").slice(0, 3).join(" "));
+					$("td:eq(3)", nRow).html("<a href='" + aData[4] + "'>mp3</a>");
+					$("td:eq(4)", nRow).html("<a href='" + aData[5] + "'>video</a>");
+				}
+			}).rowGrouping({
+				bExpandableGrouping: true,
+				asExpandedGroups: ["2012"],
+				sGroupingColumnSortDirection: "desc"
+			});
+		});
+	</script>
+	<link rel="stylesheet" href="css/jquery.dataTables.css" />
+	<link rel="stylesheet" href="css/demo_table.css" />
+</head>
+<body>
+	<table id="sermons">
+		<thead>
+			<tr>
+				<th>Year</th>
+				<th>Date</th>
+				<th>Title</th>
+				<th>Scripture</th>
+				<th>Audio Download</th>
+				<th>Video</th>
+				<th>Tags</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+</body>
+</html>
