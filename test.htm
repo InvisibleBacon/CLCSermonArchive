@@ -12,12 +12,21 @@
 				"aaSorting": [[0, "desc"]],
 				aoColumnDefs: [
 				//{ "asSorting": ["asc"], "aTargets": [0] }
+					//{bVisible: true, aTargets: [5] }
 				],
 				bPaginate: true,
+				iDisplayLength: 50,
 				fnRowCallback: function(nRow, aData, iDisplayIndex) {
 					$("td:eq(1)", nRow).text(new Date(Date.parse(aData[1])).toString().split(" ").slice(0, 3).join(" "));
-					$("td:eq(4)", nRow).html("<a href='" + aData[4] + "'>mp3</a>");
-					$("td:eq(5)", nRow).html($.map(aData[5], function(video, index) { return $("<a/>", { href: video, text: "video " + (index + 1) }).add($("<span> </span>")); }));
+
+					var videoIndex = 1;
+					var media = $.map(aData[4], function(link) {
+						return "<a href='" + link + "'>" +
+							(link.indexOf(".mp3") != -1 ? "mp3" : "video " + (videoIndex++))
+							+ "</a>";
+					}).join(" ");
+
+					$("td:eq(4)", nRow).html(media);
 				}
 			});
 		});
@@ -29,12 +38,11 @@
 	<table id="sermons">
 		<thead>
 			<tr>
-				<th>Year</th>
-				<th>Date</th>
+				<th width="5%">Year</th>
+				<th width="10%">Date</th>
 				<th>Title</th>
 				<th>Scripture</th>
-				<th>Audio Download</th>
-				<th>Video</th>
+				<th width="10%">Media</th>
 				<th>Tags</th>
 			</tr>
 		</thead>

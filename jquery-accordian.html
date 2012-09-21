@@ -24,11 +24,11 @@
 
   			text = text.substring(text.indexOf("("));
   			var scripture = text.substring(1, text.lastIndexOf(")")).replace(/ - /g, "; ");
-  			var mp3 = $(item).find("a:contains('Mp3')").attr("href");
-  			var videos = $(item).find("a:not(:contains('Mp3'))").map(function() { return $(this).attr("href") }).get();
+  			var media = [$(item).find("a:contains('Mp3')").attr("href")].concat(
+  				$(item).find("a:not(:contains('Mp3'))").map(function() { return $(this).attr("href") }).get());
 
   			//console.log(videos);
-  			array.push([year.toString(), date, title, scripture, mp3, videos, ""]);
+  			array.push([year.toString(), date, title, scripture, media, ""]);
   		});
 
   		window.final = (array);
