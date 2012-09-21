@@ -17,7 +17,7 @@
 				fnRowCallback: function(nRow, aData, iDisplayIndex) {
 					$("td:eq(0)", nRow).text(new Date(Date.parse(aData[1])).toString().split(" ").slice(0, 3).join(" "));
 					$("td:eq(3)", nRow).html("<a href='" + aData[4] + "'>mp3</a>");
-					$("td:eq(4)", nRow).html("<a href='" + aData[5] + "'>video</a>");
+					$("td:eq(4)", nRow).html($.map(aData[5], function(video, index) { return $("<a/>", { href: video, text: "video " + (index + 1) }).add($("<span> </span>")); }));
 				}
 			}).rowGrouping({
 				bExpandableGrouping: true,
