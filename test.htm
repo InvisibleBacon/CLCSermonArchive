@@ -4,18 +4,12 @@
 	<title>Test</title>
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="jquery.dataTables.js"></script>
-	<script type="text/javascript" src="jquery.dataTables.rowGrouping.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			$("#sermons").dataTable({
 				sAjaxSource: "data.js",
 				"aaSorting": [[1, "desc"], [0, "desc"]],
-				aoColumnDefs: [
-				//{ "asSorting": ["asc"], "aTargets": [0] }
-					//{bVisible: true, aTargets: [5] }
-				],
-				bPaginate: true,
-				iDisplayLength: 50,
+				iDisplayLength: 25,
 				fnRowCallback: function(nRow, aData, iDisplayIndex) {
 					$("td:eq(1)", nRow).text(new Date(Date.parse(aData[1])).toString().split(" ").slice(0, 3).join(" "));
 
