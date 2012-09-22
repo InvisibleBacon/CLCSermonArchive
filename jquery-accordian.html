@@ -17,6 +17,7 @@
   		$(".accordion li").each(function(i, item) {
   			var text = $(item).text().trim();
   			var title = text.substring(1, text.indexOf("\"", 1));
+
   			text = text.substring(text.indexOf("[", title.length));
   			var dateParts = text.substring(1, text.indexOf("]", 1)).split("-");
   			var year = dateParts[2] = new Number(dateParts[2]) + 2000;
@@ -24,8 +25,7 @@
 
   			text = text.substring(text.indexOf("("));
   			var scripture = text.substring(1, text.lastIndexOf(")")).replace(/ - /g, "; ");
-  			var media = [$(item).find("a:contains('Mp3')").attr("href")].concat(
-  				$(item).find("a:not(:contains('Mp3'))").map(function() { return $(this).attr("href") }).get());
+  			var media = $(item).find("a").map(function() { return $(this).attr("href") }).get();
 
   			//console.log(videos);
   			array.push([year.toString(), date, title, scripture, media, ""]);

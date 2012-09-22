@@ -2592,7 +2592,6 @@
 			"Getting Ready To Be Taken Up",
 			"Genesis 50:22",
 			[
-				null,
 				"mp3s/2007/[11-04-07] Getting Ready To Be Taken Up (Genesis 50 22).mp3"
 			],
 			""
@@ -2603,7 +2602,6 @@
 			"Proper Burial, Powerful Ressurection",
 			"Joshua 24:32; John 4:4",
 			[
-				null,
 				"mp3s/2007/[11-11-07] Proper Burial, Powerful Ressurection (Joshua 24 32 - John 4 4).mp3"
 			],
 			""
@@ -2614,7 +2612,6 @@
 			"The Winds of Change",
 			"Genesis 47:18",
 			[
-				null,
 				"mp3s/2007/[11-18-07] The Winds of Change (Genesis 47 18).mp3"
 			],
 			""
@@ -2625,7 +2622,6 @@
 			"Deal or No Deal",
 			"Exodus 1:6",
 			[
-				null,
 				"mp3s/2007/[11-25-07] Deal or No Deal (Exodus 1 6).mp3"
 			],
 			""
