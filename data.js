@@ -1,5 +1,5 @@
 ﻿{
-	"aaData": 
+	"aaData":
 	[
 		[
 			"2012",
@@ -9,7 +9,7 @@
 			[
 				"mp3s/2012/[01-01-12] Don't Drop The Ball (Philippians 3 12).mp3",
 				"https://vimeo.com/35266494",
-				"https://vimeo.com/35267898"
+				"https://vimeo.com/35266494?asl"
 			],
 			""
 		],
@@ -314,7 +314,8 @@
 			"Matthew 6:25",
 			[
 				"mp3s/2012/[07-22-12] Wait To Worry (Matthew 6 25).mp3",
-				"https://vimeo.com/46356872"
+				"https://vimeo.com/46356872",
+				"https://vimeo.com/46356872?asl"
 			],
 			""
 		],
